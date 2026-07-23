@@ -31,11 +31,16 @@
   "url": "https://elkvalleyorthotics.com/"
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
   @font-face { font-family: 'Hussar Bold'; src: url('assets/fonts/HussarBd.otf') format('opentype'); font-weight: 700; font-style: normal; }
   @font-face { font-family: 'Hussar Bold'; src: url('assets/fonts/HussarBdObl.otf') format('opentype'); font-weight: 700; font-style: italic; }
+  @font-face { font-family: 'Hussar Ekologiczne'; src: url('assets/fonts/HussarEkologiczne1.otf') format('opentype'); font-weight: 400; font-style: normal; }
+  @font-face { font-family: 'Hussar Ekologiczne'; src: url('assets/fonts/HussarEkologiczne1Obl.otf') format('opentype'); font-weight: 400; font-style: italic; }
+  @font-face { font-family: 'Montserrat'; src: url('assets/fonts/Montserrat-Regular.otf') format('opentype'); font-weight: 400; font-style: normal; }
+  @font-face { font-family: 'Montserrat'; src: url('assets/fonts/Montserrat-Medium.otf') format('opentype'); font-weight: 500; font-style: normal; }
+  @font-face { font-family: 'Montserrat'; src: url('assets/fonts/Montserrat-SemiBold.otf') format('opentype'); font-weight: 600; font-style: normal; }
+  @font-face { font-family: 'Montserrat'; src: url('assets/fonts/Montserrat-Bold.otf') format('opentype'); font-weight: 700; font-style: normal; }
+  @font-face { font-family: 'Montserrat'; src: url('assets/fonts/Montserrat-ExtraBold.otf') format('opentype'); font-weight: 800; font-style: normal; }
   body { margin: 0; background: #F3EFE6; }
   a { color: #A55B3F; }
   a:hover { color: #315343; }
@@ -50,7 +55,7 @@
     <div style="max-width: 1240px; margin: 0 auto; padding: {{ headerPadding }} 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; transition: padding 0.3s ease;">
       <a href="#" onClick="{{ goHome }}" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
         <img src="assets/logo-with-name.jpeg" alt="Elk Valley Orthotics icon" style="height: {{ logoSize }}; width: {{ logoSize }}; object-fit: contain; transition: height 0.3s ease, width 0.3s ease;" />
-        <span style="font-family: 'Hussar Bold', sans-serif; font-size: 19px; color: #2A4436; letter-spacing: 0.01em;">Elk Valley Orthotics</span>
+        <span style="font-family: 'Hussar Ekologiczne', sans-serif; font-size: 19px; color: #2A4436; letter-spacing: 0.01em;">Elk Valley Orthotics</span>
       </a>
 
       <nav style="display: {{ desktopNavDisplay }}; align-items: center; gap: 30px;">
@@ -219,7 +224,7 @@
     <div style="max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; padding-bottom: 28px; border-bottom: 1px solid rgba(243,239,230,0.15);">
       <div style="display: flex; align-items: center; gap: 10px;">
         <img src="assets/logo-with-name.jpeg" alt="Elk Valley Orthotics icon" style="height: 44px; width: 44px; object-fit: contain;" />
-        <span style="font-family: 'Hussar Bold', sans-serif; font-size: 15px; color: #F3EFE6;">Elk Valley Orthotics</span>
+        <span style="font-family: 'Hussar Ekologiczne', sans-serif; font-size: 15px; color: #F3EFE6;">Elk Valley Orthotics</span>
       </div>
       <div style="display: flex; gap: 24px; flex-wrap: wrap;">
         <a href="#" onClick="{{ goHome }}" style="text-decoration: none; color: #B7C2B6; font-size: 14px;">Home</a>
