@@ -16,8 +16,17 @@
 <meta property="og:title" content="Elk Valley Orthotics — Custom Foot Care for the Elk Valley" />
 <meta property="og:description" content="Custom orthotics built for hiking, biking, skiing and working life in Fernie, BC and the surrounding Elk Valley." />
 <meta property="og:type" content="website" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:locale" content="en_CA" />
+<meta property="og:image" content="https://elkvalleyorthotics.com/assets/logo-with-name.jpeg" />
+<meta name="twitter:card" content="summary" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#315343" />
+<meta name="geo.region" content="CA-BC" />
+<meta name="geo.placename" content="Fernie" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <link rel="canonical" href="https://elkvalleyorthotics.com/" />
+<link rel="icon" type="image/jpeg" href="assets/logo-with-name.jpeg" />
+<link rel="apple-touch-icon" href="assets/logo-with-name.jpeg" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -28,7 +37,9 @@
   "address": { "@type": "PostalAddress", "addressLocality": "Fernie", "addressRegion": "BC", "addressCountry": "CA" },
   "areaServed": ["Fernie", "Sparwood", "Elkford", "Elko", "Kimberley"],
   "founder": { "@type": "Person", "name": "Kendra Sweeney" },
-  "url": "https://elkvalleyorthotics.com/"
+  "url": "https://elkvalleyorthotics.com/",
+  "priceRange": "$$",
+  "medicalSpecialty": "Pedorthics"
 }
 </script>
 <style>
@@ -54,7 +65,7 @@
   <header style="position: sticky; top: 0; z-index: 100; background: {{ headerBg }}; border-bottom: 1px solid rgba(49,83,67,0.15); box-shadow: {{ headerShadow }}; transition: background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;">
     <div style="max-width: 1240px; margin: 0 auto; padding: {{ headerPadding }} 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; transition: padding 0.3s ease;">
       <a href="#" onClick="{{ goHome }}" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
-        <img src="assets/logo-with-name.jpeg" alt="Elk Valley Orthotics icon" style="height: {{ logoSize }}; width: {{ logoSize }}; object-fit: contain; transition: height 0.3s ease, width 0.3s ease;" />
+        <img src="assets/logo-with-name.jpeg" alt="Elk Valley Orthotics logo" style="height: {{ logoSize }}; width: {{ logoSize }}; object-fit: contain; transition: height 0.3s ease, width 0.3s ease;" />
         <span style="font-family: 'Hussar Ekologiczne', sans-serif; font-size: 19px; color: #2A4436; letter-spacing: 0.01em;">Elk Valley Orthotics</span>
       </a>
 
@@ -68,7 +79,7 @@
 
       <div style="display: flex; align-items: center; gap: 12px;">
         <a href="https://elkvalleyorthotics.janeapp.com/" target="_blank" rel="noopener" style="display: {{ desktopNavDisplay }}; text-decoration: none; background: #A55B3F; color: #F3EFE6; font-weight: 700; font-size: 14.5px; padding: 12px 22px; border-radius: 3px; white-space: nowrap; transition: background 0.2s ease, transform 0.2s ease;" style-hover="background: #8c4a32; transform: translateY(-1px);">Book Appointment</a>
-        <button onClick="{{ toggleMobileNav }}" aria-label="Toggle menu" style="display: {{ mobileButtonDisplay }}; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; align-items: flex-end;">
+        <button onClick="{{ toggleMobileNav }}" aria-label="Toggle menu" style="display: {{ mobileButtonDisplay }}; background: none; border: none; cursor: pointer; padding: 12px; min-width: 44px; min-height: 44px; flex-direction: column; gap: 5px; align-items: center; justify-content: center;">
           <span style="display: block; width: 26px; height: 3px; background: #315343; border-radius: 2px;"></span>
           <span style="display: block; width: 26px; height: 3px; background: #315343; border-radius: 2px;"></span>
           <span style="display: block; width: 18px; height: 3px; background: #315343; border-radius: 2px;"></span>
@@ -77,13 +88,13 @@
     </div>
 
     <sc-if value="{{ mobileNavOpen }}" hint-placeholder-val="{{ false }}">
-      <div style="display: flex; flex-direction: column; padding: 8px 24px 22px; gap: 4px; border-top: 1px solid rgba(49,83,67,0.12);">
-        <a href="#" onClick="{{ goHome }}" style="text-decoration: none; color: #315343; font-weight: 600; font-size: 16px; padding: 12px 4px;">Home</a>
-        <a href="#" onClick="{{ goAbout }}" style="text-decoration: none; color: #315343; font-weight: 600; font-size: 16px; padding: 12px 4px;">About</a>
-        <a href="#" onClick="{{ goServices }}" style="text-decoration: none; color: #315343; font-weight: 600; font-size: 16px; padding: 12px 4px;">Services</a>
-        <a href="#" onClick="{{ goFaq }}" style="text-decoration: none; color: #315343; font-weight: 600; font-size: 16px; padding: 12px 4px;">FAQ</a>
-        <a href="#" onClick="{{ goContact }}" style="text-decoration: none; color: #315343; font-weight: 600; font-size: 16px; padding: 12px 4px;">Contact</a>
-        <a href="https://elkvalleyorthotics.janeapp.com/" target="_blank" rel="noopener" style="text-decoration: none; background: #A55B3F; color: #F3EFE6; font-weight: 700; font-size: 15px; padding: 14px 20px; border-radius: 3px; text-align: center; margin-top: 10px;">Book Appointment</a>
+      <div style="display: flex; flex-direction: column; padding: 8px 24px 22px; gap: 2px; border-top: 1px solid rgba(49,83,67,0.12);">
+        <a href="#" onClick="{{ goHome }}" style="text-decoration: none; color: #315343; font-weight: 600; font-size: 16px; padding: 14px 4px; min-height: 44px; box-sizing: border-box; display: flex; align-items: center;">Home</a>
+        <a href="#" onClick="{{ goAbout }}" style="text-decoration: none; color: #315343; font-weight: 600; font-size: 16px; padding: 14px 4px; min-height: 44px; box-sizing: border-box; display: flex; align-items: center;">About</a>
+        <a href="#" onClick="{{ goServices }}" style="text-decoration: none; color: #315343; font-weight: 600; font-size: 16px; padding: 14px 4px; min-height: 44px; box-sizing: border-box; display: flex; align-items: center;">Services</a>
+        <a href="#" onClick="{{ goFaq }}" style="text-decoration: none; color: #315343; font-weight: 600; font-size: 16px; padding: 14px 4px; min-height: 44px; box-sizing: border-box; display: flex; align-items: center;">FAQ</a>
+        <a href="#" onClick="{{ goContact }}" style="text-decoration: none; color: #315343; font-weight: 600; font-size: 16px; padding: 14px 4px; min-height: 44px; box-sizing: border-box; display: flex; align-items: center;">Contact</a>
+        <a href="https://elkvalleyorthotics.janeapp.com/" target="_blank" rel="noopener" style="text-decoration: none; background: #A55B3F; color: #F3EFE6; font-weight: 700; font-size: 15px; padding: 14px 20px; border-radius: 3px; text-align: center; margin-top: 10px; min-height: 44px; box-sizing: border-box; display: flex; align-items: center; justify-content: center;">Book Appointment</a>
       </div>
     </sc-if>
   </header>
@@ -92,7 +103,7 @@
   <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
     <div>
       <!-- 1. Header / hero -->
-      <section style="position: relative; min-height: 680px; display: flex; align-items: center; overflow: hidden;">
+      <section style="position: relative; min-height: {{ heroMinHeight }}; display: flex; align-items: center; overflow: hidden;">
         <div style="position: absolute; inset: 0; background: repeating-linear-gradient(135deg, #8CA184 0px, #8CA184 22px, #7c9273 22px, #7c9273 44px);"></div>
         <div style="position: absolute; top: 20px; right: 20px; z-index: 1;">
           <div style="border: 2px dashed rgba(243,239,230,0.6); padding: 12px 16px; text-align: right; max-width: 240px;">
@@ -100,7 +111,7 @@
           </div>
         </div>
         <div style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(24,36,29,0.82) 0%, rgba(24,36,29,0.55) 32%, rgba(24,36,29,0.15) 60%, rgba(24,36,29,0.05) 100%);"></div>
-        <div style="position: relative; max-width: 1240px; margin: 0 auto; padding: 100px 24px; width: 100%; box-sizing: border-box; text-align: left;">
+        <div style="position: relative; max-width: 1240px; margin: 0 auto; padding: {{ heroPad }}; width: 100%; box-sizing: border-box; text-align: left;">
           <div style="max-width: 540px;">
             <h1 style="font-family: 'Hussar Bold', sans-serif; color: #F3EFE6; font-size: clamp(30px, 5vw, 52px); line-height: 1.15; margin: 0 0 18px;">Custom orthotics built for how you move through the valley.</h1>
             <p style="color: #EDE8DA; font-size: clamp(16px, 1.9vw, 19px); line-height: 1.75; margin: 0 0 40px;">A short tagline / intro to Elk Valley Orthotics — placeholder copy to be finalized.</p>
@@ -110,7 +121,7 @@
       </section>
 
       <!-- 2. Pedorthist intro -->
-      <section style="max-width: 1040px; margin: 0 auto; padding: 130px 24px; display: grid; grid-template-columns: minmax(220px, 300px) 1fr; gap: 64px; align-items: center;">
+      <section style="max-width: 1040px; margin: 0 auto; padding: {{ introPad }}; display: grid; grid-template-columns: {{ introGridCols }}; gap: {{ introGap }}; align-items: center;">
         <img src="assets/kendra-headshot.jpg" alt="Kendra Sweeney, pedorthist at Elk Valley Orthotics" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 4px;" />
         <div>
           <p style="color: #A55B3F; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; font-size: 13px; margin: 0 0 14px;">Your Pedorthist</p>
@@ -121,7 +132,7 @@
       </section>
 
       <!-- 3. Services summary -->
-      <section style="background: #FFFFFF; border-top: 1px solid rgba(49,83,67,0.1); padding: 130px 24px; text-align: center;">
+      <section style="background: #FFFFFF; border-top: 1px solid rgba(49,83,67,0.1); padding: {{ servicesSectionPad }}; text-align: center;">
         <div style="max-width: 640px; margin: 0 auto;">
           <p style="color: #A55B3F; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 13px; margin: 0 0 10px;">Services</p>
           <h2 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(24px, 3.5vw, 32px); margin: 0 0 16px;">Foot care that keeps you outside</h2>
@@ -134,11 +145,11 @@
 
   <!-- ============ ABOUT ============ -->
   <sc-if value="{{ isAbout }}" hint-placeholder-val="{{ false }}">
-    <div style="max-width: 900px; margin: 0 auto; padding: 96px 24px 130px;">
+    <div style="max-width: 900px; margin: 0 auto; padding: {{ innerSectionPad }};">
       <p style="color: #A55B3F; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 13px; margin: 0 0 10px;">About</p>
       <h1 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(28px, 4vw, 38px); margin: 0 0 32px;">About Kendra &amp; Pedorthics</h1>
 
-      <div style="display: grid; grid-template-columns: minmax(220px, 280px) 1fr; gap: 52px; align-items: start; margin-bottom: 76px;">
+      <div style="display: grid; grid-template-columns: {{ aboutImgGridCols }}; gap: {{ aboutImgGap }}; align-items: start; margin-bottom: 56px;">
         <img src="assets/kendra-headshot.jpg" alt="Kendra Sweeney" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 4px;" />
         <div>
           <h2 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: 22px; margin: 0 0 14px;">About Kendra</h2>
@@ -155,7 +166,7 @@
 
   <!-- ============ SERVICES ============ -->
   <sc-if value="{{ isServices }}" hint-placeholder-val="{{ false }}">
-    <div style="max-width: 1100px; margin: 0 auto; padding: 96px 24px 130px;">
+    <div style="max-width: 1100px; margin: 0 auto; padding: {{ innerSectionPad }};">
       <p style="color: #A55B3F; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 13px; margin: 0 0 10px;">Services &amp; Products</p>
       <h1 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(28px, 4vw, 38px); margin: 0 0 40px;">What We Offer</h1>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px;">
@@ -174,7 +185,7 @@
 
   <!-- ============ FAQ ============ -->
   <sc-if value="{{ isFaq }}" hint-placeholder-val="{{ false }}">
-    <div style="max-width: 800px; margin: 0 auto; padding: 96px 24px 130px;">
+    <div style="max-width: 800px; margin: 0 auto; padding: {{ innerSectionPad }};">
       <p style="color: #A55B3F; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 13px; margin: 0 0 10px;">FAQ</p>
       <h1 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(28px, 4vw, 38px); margin: 0 0 40px;">Process &amp; What to Expect</h1>
       <div style="display: flex; flex-direction: column; gap: 8px;">
@@ -190,17 +201,17 @@
 
   <!-- ============ CONTACT ============ -->
   <sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}">
-    <div style="max-width: 1100px; margin: 0 auto; padding: 96px 24px 130px;">
+    <div style="max-width: 1100px; margin: 0 auto; padding: {{ innerSectionPad }};">
       <p style="color: #A55B3F; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 13px; margin: 0 0 10px;">Contact</p>
       <h1 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(28px, 4vw, 38px); margin: 0 0 40px;">Get In Touch</h1>
 
-      <div style="display: grid; grid-template-columns: minmax(280px, 1fr) 1.2fr; gap: 40px;">
+      <div style="display: grid; grid-template-columns: {{ contactGridCols }}; gap: 40px;">
         <form style="display: flex; flex-direction: column; gap: 14px;">
-          <input type="text" placeholder="Name" style="padding: 14px; border: 1px solid rgba(49,83,67,0.25); border-radius: 3px; font-family: 'Montserrat', sans-serif; font-size: 15px; background: #FFFFFF;" />
-          <input type="email" placeholder="Email" style="padding: 14px; border: 1px solid rgba(49,83,67,0.25); border-radius: 3px; font-family: 'Montserrat', sans-serif; font-size: 15px; background: #FFFFFF;" />
-          <input type="tel" placeholder="Phone" style="padding: 14px; border: 1px solid rgba(49,83,67,0.25); border-radius: 3px; font-family: 'Montserrat', sans-serif; font-size: 15px; background: #FFFFFF;" />
-          <textarea placeholder="Message" rows="5" style="padding: 14px; border: 1px solid rgba(49,83,67,0.25); border-radius: 3px; font-family: 'Montserrat', sans-serif; font-size: 15px; resize: vertical; background: #FFFFFF;"></textarea>
-          <button type="button" style="background: #A55B3F; color: #F3EFE6; border: none; font-weight: 700; font-size: 15px; padding: 14px; border-radius: 3px; cursor: pointer;">Send Message</button>
+          <input type="text" placeholder="Name" style="padding: 14px; border: 1px solid rgba(49,83,67,0.25); border-radius: 3px; font-family: 'Montserrat', sans-serif; font-size: 16px; background: #FFFFFF; min-height: 44px; box-sizing: border-box;" />
+          <input type="email" placeholder="Email" style="padding: 14px; border: 1px solid rgba(49,83,67,0.25); border-radius: 3px; font-family: 'Montserrat', sans-serif; font-size: 16px; background: #FFFFFF; min-height: 44px; box-sizing: border-box;" />
+          <input type="tel" placeholder="Phone" style="padding: 14px; border: 1px solid rgba(49,83,67,0.25); border-radius: 3px; font-family: 'Montserrat', sans-serif; font-size: 16px; background: #FFFFFF; min-height: 44px; box-sizing: border-box;" />
+          <textarea placeholder="Message" rows="5" style="padding: 14px; border: 1px solid rgba(49,83,67,0.25); border-radius: 3px; font-family: 'Montserrat', sans-serif; font-size: 16px; resize: vertical; background: #FFFFFF;"></textarea>
+          <button type="button" style="background: #A55B3F; color: #F3EFE6; border: none; font-weight: 700; font-size: 15px; padding: 14px; border-radius: 3px; cursor: pointer; min-height: 44px;">Send Message</button>
           <p style="color: #8a8171; font-size: 12.5px; margin: 4px 0 0;">Form is a placeholder — needs to be wired to an email/booking service.</p>
 
           <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 14.5px; color: #4a5a4e;">
@@ -220,8 +231,8 @@
   </sc-if>
 
   <!-- FOOTER -->
-  <footer style="background: #24352C; padding: 64px 24px 36px;">
-    <div style="max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; padding-bottom: 28px; border-bottom: 1px solid rgba(243,239,230,0.15);">
+  <footer style="background: #24352C; padding: 56px 20px 32px;">
+    <div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: {{ footerDirection }}; flex-wrap: wrap; justify-content: space-between; align-items: {{ footerAlign }}; gap: 24px; padding-bottom: 28px; border-bottom: 1px solid rgba(243,239,230,0.15);">
       <div style="display: flex; align-items: center; gap: 10px;">
         <img src="assets/logo-with-name.jpeg" alt="Elk Valley Orthotics icon" style="height: 44px; width: 44px; object-fit: contain;" />
         <span style="font-family: 'Hussar Ekologiczne', sans-serif; font-size: 15px; color: #F3EFE6;">Elk Valley Orthotics</span>
@@ -245,6 +256,14 @@
 class Component extends DCLogic {
   state = { mobileNavOpen: false, isMobile: false, page: 'home', scrolled: false, headerHidden: false };
 
+  pageMeta = {
+    home: { title: 'Elk Valley Orthotics | Custom Orthotics in Fernie, BC', desc: 'Custom foot orthotics and pedorthic care for the active people of the Elk Valley — Fernie, Sparwood, Elkford, Elko & Kimberley, BC.' },
+    about: { title: 'About Kendra Sweeney, Pedorthist | Elk Valley Orthotics', desc: 'Meet Kendra Sweeney and learn what a pedorthist does for the active people of the Elk Valley, BC.' },
+    services: { title: 'Orthotics Services & Products | Elk Valley Orthotics', desc: 'Custom orthotics, gait assessments, footwear fitting and bracing offered in Fernie, BC.' },
+    faq: { title: 'FAQ — What to Expect | Elk Valley Orthotics', desc: 'Answers about the orthotics process, appointments, and treatment options at Elk Valley Orthotics in Fernie, BC.' },
+    contact: { title: 'Contact & Location | Elk Valley Orthotics', desc: 'Contact Elk Valley Orthotics in Fernie, BC, or book an appointment online.' }
+  };
+
   componentDidMount() {
     this.updateIsMobile();
     this._onResize = () => this.updateIsMobile();
@@ -254,16 +273,42 @@ class Component extends DCLogic {
       if (scrolled !== this.state.scrolled) this.setState({ scrolled });
     };
     window.addEventListener('scroll', this._onScroll, { passive: true });
+    const validPages = ['home', 'about', 'services', 'faq', 'contact'];
+    const fromHash = (window.location.hash || '').replace('#', '');
+    const initialPage = validPages.includes(fromHash) ? fromHash : 'home';
+    if (initialPage !== this.state.page) this.setState({ page: initialPage });
+    this.updateMeta(initialPage);
+    this._onHashChange = () => {
+      const p = (window.location.hash || '').replace('#', '');
+      if (validPages.includes(p) && p !== this.state.page) {
+        this.setState({ page: p });
+        this.updateMeta(p);
+      }
+    };
+    window.addEventListener('hashchange', this._onHashChange);
   }
   componentWillUnmount() {
     window.removeEventListener('resize', this._onResize);
     window.removeEventListener('scroll', this._onScroll);
+    window.removeEventListener('hashchange', this._onHashChange);
+  }
+  updateMeta(page) {
+    const meta = this.pageMeta[page] || this.pageMeta.home;
+    const canonicalHref = 'https://elkvalleyorthotics.com/' + (page === 'home' ? '' : '#' + page);
+    let m = document.querySelector('meta[name="description"]');
+    if (m) m.setAttribute('content', meta.desc);
+    let c = document.querySelector('link[rel="canonical"]');
+    if (c) c.setAttribute('href', canonicalHref);
+    document.title = meta.title;
+    // runtime re-render stomps document.title synchronously; reassert after it settles
+    setTimeout(() => { document.title = meta.title; }, 0);
+    requestAnimationFrame(() => { document.title = meta.title; });
   }
   updateIsMobile() {
     const isMobile = window.innerWidth < 880;
     if (isMobile !== this.state.isMobile) this.setState({ isMobile });
   }
-  go(page) { return (e) => { if (e) e.preventDefault(); this.setState({ page, mobileNavOpen: false }); window.scrollTo(0, 0); }; }
+  go(page) { return (e) => { if (e) e.preventDefault(); window.location.hash = page === 'home' ? '' : page; this.setState({ page, mobileNavOpen: false }); this.updateMeta(page); window.scrollTo(0, 0); }; }
 
   services = [
     { initial: 'C', bg: '#315343', title: 'Custom Foot Orthotics', desc: 'A description of custom orthotic fabrication.' },
@@ -291,7 +336,20 @@ class Component extends DCLogic {
       faq: page === 'faq' ? '#A55B3F' : '#315343',
       contact: page === 'contact' ? '#A55B3F' : '#315343'
     };
+    const isMobile = this.state.isMobile;
     return {
+      introGridCols: isMobile ? '1fr' : 'minmax(220px, 300px) 1fr',
+      introGap: isMobile ? '28px' : '64px',
+      introPad: isMobile ? '64px 20px' : '130px 24px',
+      servicesSectionPad: isMobile ? '64px 20px' : '130px 24px',
+      heroMinHeight: isMobile ? '540px' : '680px',
+      heroPad: isMobile ? '56px 20px' : '100px 24px',
+      innerSectionPad: isMobile ? '56px 20px 72px' : '96px 24px 130px',
+      aboutImgGridCols: isMobile ? '1fr' : 'minmax(220px, 280px) 1fr',
+      aboutImgGap: isMobile ? '24px' : '52px',
+      contactGridCols: isMobile ? '1fr' : 'minmax(280px, 1fr) 1.2fr',
+      footerDirection: isMobile ? 'column' : 'row',
+      footerAlign: isMobile ? 'flex-start' : 'center',
       headerBg: this.state.scrolled ? '#EDE7D8' : '#F3EFE6',
       headerShadow: this.state.scrolled ? '0 6px 18px rgba(36,53,44,0.12)' : '0 2px 10px rgba(49,83,67,0.06)',
       headerPadding: this.state.scrolled ? '10px' : '18px',
