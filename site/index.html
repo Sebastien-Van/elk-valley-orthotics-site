@@ -10,14 +10,14 @@
 
 <template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#315343"/><text x="50" y="58" font-size="34" fill="#F3EFE6" text-anchor="middle" font-family="sans-serif">EVO</text></svg></template>
 <helmet>
-<title>Elk Valley Orthotics | Custom Orthotics in Fernie, BC</title>
-<meta name="description" content="Custom foot orthotics and pedorthic care for the active people of the Elk Valley — Fernie, Sparwood, Elkford, Elko & Kimberley, BC. Book with Kendra Sweeney today." />
-<meta name="keywords" content="orthotics Fernie, pedorthist BC, Elk Valley orthotics, custom orthotics Sparwood, Kendra Sweeney pedorthist" />
-<meta property="og:title" content="Elk Valley Orthotics — Custom Foot Care for the Elk Valley" />
-<meta property="og:description" content="Custom orthotics built for hiking, biking, skiing and working life in Fernie, BC and the surrounding Elk Valley." />
+<title>Fernie Orthotics | Elk Valley Orthotics — Custom Orthotics in Fernie, BC</title>
+<meta name="description" content="Fernie orthotics clinic offering custom foot orthotics and pedorthic care for the active people of Fernie and the Elk Valley — Sparwood, Elkford, Elko & Kimberley, BC. Book with Kendra Sweeney today." />
+<meta name="keywords" content="Fernie orthotics, orthotics Fernie BC, Fernie pedorthist, pedorthist Fernie, Elk Valley orthotics, custom orthotics Fernie, custom orthotics Sparwood, Kendra Sweeney pedorthist Fernie" />
+<meta property="og:title" content="Fernie Orthotics — Elk Valley Orthotics, Custom Foot Care in Fernie, BC" />
+<meta property="og:description" content="Fernie's local orthotics clinic — custom orthotics built for hiking, biking, skiing and working life in Fernie, BC and the surrounding Elk Valley." />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en_CA" />
-<meta property="og:image" content="https://elkvalleyorthotics.com/assets/logo-with-name.jpeg" />
+<meta property="og:image" content="https://elkvalleyorthotics.com/assets/logo-with-name.png" />
 <meta name="twitter:card" content="summary" />
 <meta name="robots" content="index, follow" />
 <meta name="theme-color" content="#315343" />
@@ -25,14 +25,14 @@
 <meta name="geo.placename" content="Fernie" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <link rel="canonical" href="https://elkvalleyorthotics.com/" />
-<link rel="icon" type="image/jpeg" href="assets/logo-with-name.jpeg" />
-<link rel="apple-touch-icon" href="assets/logo-with-name.jpeg" />
+<link rel="icon" type="image/jpeg" href="assets/logo-icon.png" />
+<link rel="apple-touch-icon" href="assets/logo-icon.png" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",
   "name": "Elk Valley Orthotics",
-  "image": "https://elkvalleyorthotics.com/assets/logo-with-name.jpeg",
+  "image": "https://elkvalleyorthotics.com/assets/logo-with-name.png",
   "description": "Custom foot orthotics and pedorthic care serving the Elk Valley region of British Columbia.",
   "address": { "@type": "PostalAddress", "addressLocality": "Fernie", "addressRegion": "BC", "addressCountry": "CA" },
   "areaServed": ["Fernie", "Sparwood", "Elkford", "Elko", "Kimberley"],
@@ -65,7 +65,7 @@
   <header style="position: sticky; top: 0; z-index: 100; background: {{ headerBg }}; border-bottom: 1px solid rgba(49,83,67,0.15); box-shadow: {{ headerShadow }}; transition: background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;">
     <div style="max-width: 1240px; margin: 0 auto; padding: {{ headerPadding }} 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; transition: padding 0.3s ease;">
       <a href="#" onClick="{{ goHome }}" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
-        <img src="assets/logo-with-name.jpeg" alt="Elk Valley Orthotics logo" style="height: {{ logoSize }}; width: {{ logoSize }}; object-fit: contain; transition: height 0.3s ease, width 0.3s ease;" />
+        <img src="assets/logo-icon.png" alt="Elk Valley Orthotics logo" style="height: {{ logoSize }}; width: {{ logoSize }}; object-fit: contain; transition: height 0.3s ease, width 0.3s ease;" />
         <span style="font-family: 'Hussar Ekologiczne', sans-serif; font-size: 19px; color: #2A4436; letter-spacing: 0.01em;">Elk Valley Orthotics</span>
       </a>
 
@@ -104,12 +104,7 @@
     <div>
       <!-- 1. Header / hero -->
       <section style="position: relative; min-height: {{ heroMinHeight }}; display: flex; align-items: center; overflow: hidden;">
-        <div style="position: absolute; inset: 0; background: repeating-linear-gradient(135deg, #8CA184 0px, #8CA184 22px, #7c9273 22px, #7c9273 44px);"></div>
-        <div style="position: absolute; top: 20px; right: 20px; z-index: 1;">
-          <div style="border: 2px dashed rgba(243,239,230,0.6); padding: 12px 16px; text-align: right; max-width: 240px;">
-            <div style="font-family: 'Montserrat', sans-serif; font-size: 11px; letter-spacing: 0.04em; color: #F3EFE6; text-transform: uppercase; line-height: 1.6;">Elk Valley photo — to be replaced<br/>mountain / trail / ski scene</div>
-          </div>
-        </div>
+        <img src="assets/hero-mountain.jpg" alt="Mountain peak at sunset near Fernie, BC" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
         <div style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(24,36,29,0.82) 0%, rgba(24,36,29,0.55) 32%, rgba(24,36,29,0.15) 60%, rgba(24,36,29,0.05) 100%);"></div>
         <div style="position: relative; max-width: 1240px; margin: 0 auto; padding: {{ heroPad }}; width: 100%; box-sizing: border-box; text-align: left;">
           <div style="max-width: 540px;">
@@ -147,7 +142,7 @@
   <sc-if value="{{ isAbout }}" hint-placeholder-val="{{ false }}">
     <div style="max-width: 900px; margin: 0 auto; padding: {{ innerSectionPad }};">
       <p style="color: #A55B3F; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 13px; margin: 0 0 10px;">About</p>
-      <h1 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(28px, 4vw, 38px); margin: 0 0 32px;">About Kendra &amp; Pedorthics</h1>
+      <h1 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(28px, 4vw, 38px); margin: 0 0 32px;">About Kendra &amp; Pedorthics in Fernie</h1>
 
       <div style="display: grid; grid-template-columns: {{ aboutImgGridCols }}; gap: {{ aboutImgGap }}; align-items: start; margin-bottom: 56px;">
         <img src="assets/kendra-headshot.jpg" alt="Kendra Sweeney" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 4px;" />
@@ -168,7 +163,7 @@
   <sc-if value="{{ isServices }}" hint-placeholder-val="{{ false }}">
     <div style="max-width: 1100px; margin: 0 auto; padding: {{ innerSectionPad }};">
       <p style="color: #A55B3F; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 13px; margin: 0 0 10px;">Services &amp; Products</p>
-      <h1 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(28px, 4vw, 38px); margin: 0 0 40px;">What We Offer</h1>
+      <h1 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(28px, 4vw, 38px); margin: 0 0 40px;">Orthotics Services in Fernie, BC</h1>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px;">
         <sc-for list="{{ services }}" as="svc" hint-placeholder-count="6">
           <div style="background: #FFFFFF; border: 1px solid rgba(49,83,67,0.1); border-radius: 4px; padding: 36px 30px;">
@@ -203,7 +198,7 @@
   <sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}">
     <div style="max-width: 1100px; margin: 0 auto; padding: {{ innerSectionPad }};">
       <p style="color: #A55B3F; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 13px; margin: 0 0 10px;">Contact</p>
-      <h1 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(28px, 4vw, 38px); margin: 0 0 40px;">Get In Touch</h1>
+      <h1 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(28px, 4vw, 38px); margin: 0 0 40px;">Contact Our Fernie Clinic</h1>
 
       <div style="display: grid; grid-template-columns: {{ contactGridCols }}; gap: 40px;">
         <form style="display: flex; flex-direction: column; gap: 14px;">
@@ -217,7 +212,7 @@
           <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 14.5px; color: #4a5a4e;">
             <span>[street address], Fernie, BC — to be confirmed</span>
             <span>(250) 000-0000 — to be confirmed</span>
-            <span>hello@elkvalleyorthotics.com — to be confirmed</span>
+            <a href="mailto:kendra@elkvalleyorthotics.ca" style="color: #A55B3F; text-decoration: none;" style-hover="color: #315343; text-decoration: underline;">kendra@elkvalleyorthotics.ca</a>
           </div>
         </form>
 
@@ -234,7 +229,7 @@
   <footer style="background: #24352C; padding: 56px 20px 32px;">
     <div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: {{ footerDirection }}; flex-wrap: wrap; justify-content: space-between; align-items: {{ footerAlign }}; gap: 24px; padding-bottom: 28px; border-bottom: 1px solid rgba(243,239,230,0.15);">
       <div style="display: flex; align-items: center; gap: 10px;">
-        <img src="assets/logo-with-name.jpeg" alt="Elk Valley Orthotics icon" style="height: 44px; width: 44px; object-fit: contain;" />
+        <img src="assets/logo-icon.png" alt="Elk Valley Orthotics icon" style="height: 44px; width: 44px; object-fit: contain;" />
         <span style="font-family: 'Hussar Ekologiczne', sans-serif; font-size: 15px; color: #F3EFE6;">Elk Valley Orthotics</span>
       </div>
       <div style="display: flex; gap: 24px; flex-wrap: wrap;">
@@ -257,11 +252,11 @@ class Component extends DCLogic {
   state = { mobileNavOpen: false, isMobile: false, page: 'home', scrolled: false, headerHidden: false };
 
   pageMeta = {
-    home: { title: 'Elk Valley Orthotics | Custom Orthotics in Fernie, BC', desc: 'Custom foot orthotics and pedorthic care for the active people of the Elk Valley — Fernie, Sparwood, Elkford, Elko & Kimberley, BC.' },
-    about: { title: 'About Kendra Sweeney, Pedorthist | Elk Valley Orthotics', desc: 'Meet Kendra Sweeney and learn what a pedorthist does for the active people of the Elk Valley, BC.' },
-    services: { title: 'Orthotics Services & Products | Elk Valley Orthotics', desc: 'Custom orthotics, gait assessments, footwear fitting and bracing offered in Fernie, BC.' },
-    faq: { title: 'FAQ — What to Expect | Elk Valley Orthotics', desc: 'Answers about the orthotics process, appointments, and treatment options at Elk Valley Orthotics in Fernie, BC.' },
-    contact: { title: 'Contact & Location | Elk Valley Orthotics', desc: 'Contact Elk Valley Orthotics in Fernie, BC, or book an appointment online.' }
+    home: { title: 'Fernie Orthotics | Elk Valley Orthotics — Custom Orthotics in Fernie, BC', desc: 'Fernie orthotics clinic offering custom foot orthotics and pedorthic care for the active people of Fernie and the Elk Valley — Sparwood, Elkford, Elko & Kimberley, BC.' },
+    about: { title: 'About Kendra Sweeney, Fernie Pedorthist | Elk Valley Orthotics', desc: 'Meet Kendra Sweeney, Fernie\'s pedorthist, and learn what a pedorthist does for the active people of Fernie and the Elk Valley, BC.' },
+    services: { title: 'Orthotics Services & Products in Fernie, BC | Elk Valley Orthotics', desc: 'Custom orthotics, gait assessments, footwear fitting and bracing offered at our Fernie, BC clinic.' },
+    faq: { title: 'FAQ — What to Expect | Fernie Orthotics, Elk Valley Orthotics', desc: 'Answers about the orthotics process, appointments, and treatment options at Elk Valley Orthotics in Fernie, BC.' },
+    contact: { title: 'Contact Our Fernie Clinic | Elk Valley Orthotics', desc: 'Contact Elk Valley Orthotics, your Fernie, BC orthotics clinic, or book an appointment online.' }
   };
 
   componentDidMount() {
