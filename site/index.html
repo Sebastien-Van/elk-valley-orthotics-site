@@ -122,7 +122,7 @@
           <p style="color: #A55B3F; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; font-size: 13px; margin: 0 0 14px;">Your Pedorthist</p>
           <h2 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(22px, 3vw, 30px); margin: 0 0 16px;">Kendra Sweeney</h2>
           <p style="color: #4a5a4e; font-size: 17px; line-height: 1.8; margin: 0 0 32px;">Kendra Sweeney, B.A. Kin., C. Ped (C), is a Canadian Certified Pedorthist and certified medical-grade compression fitter specializing in the assessment and treatment of conditions affecting the foot and lower limb. She is dedicated to helping people in the Elk Valley move comfortably and stay active through personalized, evidence-based care.</p>
-          <a href="#" onClick="{{ goAbout }}" style="text-decoration: none; background: #315343; color: #F3EFE6; font-weight: 700; font-size: 14.5px; padding: 13px 26px; border-radius: 3px; display: inline-block;" style-hover="background: #26402f;">Meet Your Pedorthist</a>
+          <a href="#" onClick="{{ goAbout }}" style="text-decoration: none; background: #315343; color: #F3EFE6; font-weight: 700; font-size: 14.5px; padding: 13px 26px; border-radius: 3px; display: inline-block; white-space: nowrap;" style-hover="background: #26402f;">Meet Your Pedorthist</a>
         </div>
       </section>
 
@@ -145,7 +145,7 @@
               <a href="#" onClick="{{ goServices }}" style="text-decoration: none; background: #A55B3F; color: #F3EFE6; font-weight: 700; font-size: 13.5px; padding: 11px 22px; border-radius: 3px; display: inline-block; white-space: nowrap;" style-hover="background: #8c4a32;">Learn More</a>
             </div>
             <div style="background: #F3EFE6; border-radius: 6px; padding: 36px 26px; display: flex; flex-direction: column; align-items: center; text-align: center;">
-              <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#315343" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 18px;"><path d="M8 45c0-4 1-7 4-9l4-9c1-3 3-5 6-5h6c2 0 3 1 3 3v6c0 2 1 3 3 4l17 6c5 2 9 4 9 8 0 3-2 5-6 5H14c-4 0-6-2-6-4z"/><path d="M8 45h52"/><path d="M21 22l9-6M24 27l9-6M27 32l9-6"/></svg>
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#315343" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 18px;"><path d="M8 46c0-4 1-6 2-8 2-4 4-6 4-8 1-4 4-6 6-6l8-2c2 0 3 1 4 3l2 6c1 2 3 3 5 4l10 4c5 2 8 4 8 8 0 3-2 5-6 5H14c-4 0-6-2-6-4z"/><path d="M8 46h52"/><path d="M20 26l6 6M24 22l6 6M28 18l6 6"/></svg>
               <h3 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: 16px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 12px;">Footwear Recommendations</h3>
               <p style="color: #4a5a4e; font-size: 14.5px; line-height: 1.6; margin: 0 0 20px; flex-grow: 1;">Expert guidance to help you find shoes that work with your feet — not against them.</p>
               <a href="#" onClick="{{ goServices }}" style="text-decoration: none; background: #A55B3F; color: #F3EFE6; font-weight: 700; font-size: 13.5px; padding: 11px 22px; border-radius: 3px; display: inline-block; white-space: nowrap;" style-hover="background: #8c4a32;">Learn More</a>
@@ -165,20 +165,29 @@
   <!-- ============ ABOUT ============ -->
   <sc-if value="{{ isAbout }}" hint-placeholder-val="{{ false }}">
     <div style="max-width: 900px; margin: 0 auto; padding: {{ innerSectionPad }};">
-      <p style="color: #A55B3F; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 13px; margin: 0 0 10px;">About</p>
+      <p style="color: #A55B3F; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 13px; margin: 0 0 10px;">ABOUT</p>
       <h1 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(28px, 4vw, 38px); margin: 0 0 32px;">About Kendra &amp; Pedorthics in Fernie</h1>
 
       <div style="display: grid; grid-template-columns: {{ aboutImgGridCols }}; gap: {{ aboutImgGap }}; align-items: start; margin-bottom: 56px;">
         <img src="assets/kendra-headshot.jpg" alt="Kendra Sweeney" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 4px;" />
         <div>
-          <h2 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: 22px; margin: 0 0 14px;">About Kendra</h2>
-          <p style="color: #4a5a4e; font-size: 16px; line-height: 1.7; margin: 0;">Text block: Kendra's background, training, and connection to the Elk Valley — to be filled in.</p>
+          <h2 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: 22px; margin: 0 0 14px;">Meet Your Pedorthist</h2>
+          <p style="color: #4a5a4e; font-size: 16px; line-height: 1.75; margin: 0 0 18px;">As a lifelong advocate for movement and healthy living, Kendra Sweeney, BA Kin., C. Ped (C), is passionate about helping people stay active, comfortable, and confident on their feet. As a Canadian Certified Pedorthist and certified medical-grade compression fitter, she provides personalized care for people experiencing foot, lower limb, and mobility concerns.</p>
+          <p style="color: #4a5a4e; font-size: 16px; line-height: 1.75; margin: 0 0 18px;">After earning her Bachelor's degree in Kinesiology from the University of Lethbridge in 2019, Kendra knew she wanted to build on her understanding of human movement to help people improve their mobility and overall quality of life. She went on to complete the Pedorthic program at Western University, combining her Kinesiology education with a specialization in lower body mechanics and conservative treatment of lower limb conditions. Her patient-first approach focuses on understanding each person's lifestyle and goals while working to relieve pain, improve mobility, and help prevent future issues.</p>
+          <p style="color: #4a5a4e; font-size: 16px; line-height: 1.75; margin: 0 0 18px;">When she's not in the clinic, you'll often find Kendra enjoying everything the Elk Valley has to offer—hiking local trails, spending time in the mountains with family and friends, and tending to her garden. She understands firsthand how important it is to maintain mobility throughout one's life and is passionate about helping people continue doing the activities they love.</p>
+          <p style="color: #4a5a4e; font-size: 16px; line-height: 1.75; margin: 0;">Proud to serve the community she calls home, Kendra is committed to providing patient-focused care in a welcoming environment where every patient feels heard, supported, and empowered to keep moving.</p>
         </div>
       </div>
 
       <div>
         <h2 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: 22px; margin: 0 0 14px;">What is a Pedorthist?</h2>
-        <p style="color: #4a5a4e; font-size: 16px; line-height: 1.7; margin: 0;">Text block: explanation of what a pedorthist does and how it differs from other foot-care professionals — to be filled in.</p>
+        <p style="color: #4a5a4e; font-size: 16px; line-height: 1.75; margin: 0 0 18px;">Canadian Certified Pedorthists are allied healthcare practitioners specializing in the assessment, treatment, and prevention of foot and lower limb conditions. Through a comprehensive biomechanical assessment, pedorthists evaluate gait pattern, lower limb alignment, joint function and range of motion, and plantar pressure to identify mechanical factors contributing to pain, dysfunction, or reduced mobility.</p>
+        <p style="color: #4a5a4e; font-size: 16px; line-height: 1.75; margin: 0 0 18px;">Based on assessment findings, treatment may include the design and fabrication of custom foot orthotics, footwear recommendations and modifications, medical-grade compression therapy, and patient education.</p>
+        <p style="color: #4a5a4e; font-size: 16px; line-height: 1.75; margin: 0 0 32px;">Pedorthists are nationally credited professionals who meet education, clinical training, and continuing competency standards to provide evidenced-based pedorthic care.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
+          <img src="assets/college-pedorthics-logo.png" alt="The College of Pedorthics of Canada logo" style="height: 60px; width: auto; object-fit: contain;" />
+          <img src="assets/pedorthic-association-logo.jpg" alt="Pedorthic Association of Canada logo" style="height: 90px; width: auto; object-fit: contain;" />
+        </div>
       </div>
     </div>
   </sc-if>
@@ -188,14 +197,11 @@
     <div style="max-width: 1100px; margin: 0 auto; padding: {{ innerSectionPad }};">
       <p style="color: #A55B3F; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 13px; margin: 0 0 10px;">Services &amp; Products</p>
       <h1 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(28px, 4vw, 38px); margin: 0 0 40px;">Orthotics Services in Fernie, BC</h1>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px;">
-        <sc-for list="{{ services }}" as="svc" hint-placeholder-count="6">
-          <div style="background: #FFFFFF; border: 1px solid rgba(49,83,67,0.1); border-radius: 4px; padding: 36px 30px;">
-            <div style="width: 46px; height: 46px; border-radius: 50%; background: {{ svc.bg }}; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
-              <span style="font-family: 'Hussar Bold', sans-serif; font-size: 17px; color: #F3EFE6;">{{ svc.initial }}</span>
-            </div>
-            <h3 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: 18px; margin: 0 0 8px;">{{ svc.title }}</h3>
-            <p style="color: #4a5a4e; font-size: 14.5px; line-height: 1.55; margin: 0;">{{ svc.desc }}</p>
+      <div style="display: flex; flex-direction: column; gap: 0;">
+        <sc-for list="{{ services }}" as="svc" hint-placeholder-count="5">
+          <div style="border-bottom: 1px solid rgba(49,83,67,0.15); padding: 32px 4px;">
+            <h3 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: 21px; margin: 0 0 12px;">{{ svc.title }}</h3>
+            <p style="color: #4a5a4e; font-size: 15.5px; line-height: 1.75; margin: 0; max-width: 820px;">{{ svc.desc }}</p>
           </div>
         </sc-for>
       </div>
@@ -234,15 +240,15 @@
           <p style="color: #8a8171; font-size: 12.5px; margin: 4px 0 0;">Form is a placeholder — needs to be wired to an email/booking service.</p>
 
           <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 14.5px; color: #4a5a4e;">
-            <span>[street address], Fernie, BC — to be confirmed</span>
-            <span>(250) 000-0000 — to be confirmed</span>
+            <span>[COMING SOON] Street address, Fernie, BC</span>
+            <span>[COMING SOON] Phone number</span>
             <a href="mailto:kendra@elkvalleyorthotics.ca" style="color: #A55B3F; text-decoration: none;" style-hover="color: #315343; text-decoration: underline;">kendra@elkvalleyorthotics.ca</a>
           </div>
         </form>
 
         <div style="min-height: 320px; border-radius: 4px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: repeating-linear-gradient(45deg, #C8A977 0px, #C8A977 18px, #bda067 18px, #bda067 36px);">
           <div style="border: 2px dashed rgba(49,83,67,0.5); padding: 22px 28px; text-align: center; background: rgba(243,239,230,0.55);">
-            <div style="font-family: 'Montserrat', sans-serif; font-size: 12.5px; letter-spacing: 0.04em; color: #315343; text-transform: uppercase; line-height: 1.7;">Map embed — to be replaced</div>
+            <div style="font-family: 'Montserrat', sans-serif; font-size: 12.5px; letter-spacing: 0.04em; color: #315343; text-transform: uppercase; line-height: 1.7;">[COMING SOON]<br/>Map embed</div>
           </div>
         </div>
       </div>
@@ -250,7 +256,7 @@
   </sc-if>
 
   <!-- FOOTER -->
-  <footer style="background: #24352C; padding: 56px 20px 32px;">
+  <footer style="background: #60745B; padding: 56px 20px 32px;">
     <div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: {{ footerDirection }}; flex-wrap: wrap; justify-content: space-between; align-items: {{ footerAlign }}; gap: 24px; padding-bottom: 28px; border-bottom: 1px solid rgba(243,239,230,0.15);">
       <div style="display: flex; align-items: center; gap: 10px;">
         <img src="assets/logo-icon.png" alt="Elk Valley Orthotics icon" style="height: 44px; width: 44px; object-fit: contain;" />
@@ -330,20 +336,19 @@ class Component extends DCLogic {
   go(page) { return (e) => { if (e) e.preventDefault(); window.location.hash = page === 'home' ? '' : page; this.setState({ page, mobileNavOpen: false }); this.updateMeta(page); window.scrollTo(0, 0); }; }
 
   services = [
-    { initial: 'C', bg: '#315343', title: 'Custom Foot Orthotics', desc: 'A description of custom orthotic fabrication.' },
-    { initial: 'G', bg: '#60745B', title: 'Gait & Movement Assessment', desc: 'A description of the initial assessment meeting.' },
-    { initial: 'B', bg: '#A55B3F', title: 'Boot & Footwear Fitting', desc: 'A description of the boot/footwear fitting service.' },
-    { initial: 'S', bg: '#8CA184', title: 'Sports & Work Bracing', desc: 'A description of bracing options offered.' },
-    { initial: 'R', bg: '#C8A977', title: 'Compression Therapy', desc: 'A description of compression products offered.' },
-    { initial: 'A', bg: '#315343', title: 'Adjustments & Repairs', desc: 'A description of the adjustment/repair process.' }
+    { title: 'Custom Orthotics', desc: "Custom foot orthotics are prescription medical devices designed specifically for your feet to improve alignment, redistribute pressure, and optimize lower limb biomechanics. Following a comprehensive biomechanical assessment, your orthotics are custom-designed and fabricated by your Canadian Certified Pedorthist to address your unique foot structure, gait, and clinical needs. Pedorthists have specialized training in orthotic design, materials, and fabrication, allowing each device to be tailored to your individual biomechanics, footwear preferences, and treatment goals." },
+    { title: 'Biomechanical & Gait Assessments', desc: "A biomechanical and gait assessment provides a detailed evaluation of how your feet and lower limbs function during both standing and walking. Your Canadian Certified Pedorthist will review your medical history and symptoms before assessing foot posture, lower limb alignment, joint range of motion, muscle strength, gait mechanics, balance, areas of increased pressure, footwear wear patterns, and overall biomechanics. The information gathered is used to develop an individualized treatment plan that fits your lifestyle while improving comfort, mobility, and long-term function." },
+    { title: 'Footwear Fitting & Recommendations', desc: "Your Canadian Certified Pedorthist will assess the fit, function, and wear characteristics of your current footwear, considering your foot shape, biomechanics, activity level, and any existing foot or lower limb conditions. Based on your assessment, you'll receive personalized footwear recommendations that best support your feet, accommodate orthotics when needed, and complement your lifestyle. We work closely with trusted local footwear retailers to help you find shoes that meet your clinical needs while fitting your preferences, lifestyle, and budget." },
+    { title: 'Adjustments & Repairs', desc: "We provide professional adjustments and repairs to custom orthotics and footwear to restore function, improve comfort, and extend the life of your devices. Whether your orthotics require modifications due to changes in symptoms, fit, or footwear, or need replacement of worn top covers, posting, or other components, your Canadian Certified Pedorthist will assess the device and make clinically appropriate adjustments. Our goal is to ensure your orthotics and footwear continue to provide the support, comfort, and performance you rely on." },
+    { title: 'Compression Therapy', desc: "Medical-grade compression garments are designed to improve circulation by applying graduated compression to help blood and lymphatic fluid return efficiently from the lower limbs. Compression therapy can help manage symptoms associated with venous insufficiency, varicose veins, swelling (edema), lymphedema, post-thrombotic syndrome, and other circulatory conditions, while also reducing leg fatigue during prolonged standing or travel. As a certified medical-grade compression fitter, your Canadian Certified Pedorthist will perform a thorough assessment, take precise measurements, and recommend the appropriate compression level, style, and garment based on your medical needs, lifestyle, and physician's recommendations. Proper fit is essential to the effectiveness of compression therapy, ensuring optimal comfort, function, and long-term compliance." }
   ];
 
   faqs = [
-    { q: 'What should I expect at my first appointment?', a: 'A description of the initial assessment process.' },
-    { q: 'Do I need a referral?', a: 'A description of referral requirements.' },
-    { q: 'How long does it take to receive my orthotics?', a: 'A description of fabrication turnaround time.' },
-    { q: 'Are orthotics covered by insurance?', a: 'A description of insurance/coverage info.' },
-    { q: 'What treatment options are available?', a: 'A description of treatment options offered.' }
+    { q: 'What should I expect at my first appointment?', a: '[COMING SOON] A description of the initial assessment process.' },
+    { q: 'Do I need a referral?', a: '[COMING SOON] A description of referral requirements.' },
+    { q: 'How long does it take to receive my orthotics?', a: '[COMING SOON] A description of fabrication turnaround time.' },
+    { q: 'Are orthotics covered by insurance?', a: '[COMING SOON] A description of insurance/coverage info.' },
+    { q: 'What treatment options are available?', a: '[COMING SOON] A description of treatment options offered.' }
   ];
 
   renderVals() {
