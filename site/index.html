@@ -56,8 +56,152 @@
   a { color: #A55B3F; }
   a:hover { color: #315343; }
   html { scroll-behavior: smooth; }
+  @keyframes hikerWalk2a { 0% { left: -6%; } 100% { left: 106%; } }
+  @keyframes sunDrift2a { 0% { transform: translateX(0); } 100% { transform: translateX(18px); } }
+  @keyframes trailDraw2b { 0% { stroke-dashoffset: 900; } 100% { stroke-dashoffset: 0; } }
+  @keyframes markerPulse2b { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.35); opacity: 0.5; } }
+  @keyframes birdFly2c { 0% { transform: translateX(-8%) translateY(0); } 100% { transform: translateX(112%) translateY(-14px); } }
+  @keyframes mtnDraw3a { 0% { stroke-dashoffset: 1000; } 60%, 100% { stroke-dashoffset: 0; } }
+  @keyframes cloudDrift3b { 0% { transform: translateX(0); } 100% { transform: translateX(24px); } }
+  @keyframes mtnDrawBack3c { 0% { stroke-dashoffset: 1500; } 50%, 100% { stroke-dashoffset: 0; } }
+  @keyframes mtnDrawFront3c { 0% { stroke-dashoffset: 1300; } 30% { stroke-dashoffset: 1300; } 90%, 100% { stroke-dashoffset: 0; } }
 </style>
 </helmet>
+<meta name="design_doc_mode" content="canvas" />
+
+<section style="display: flex; flex-wrap: wrap; gap: 32px; padding: 32px; align-items: flex-start; font-family: 'Montserrat', sans-serif;">
+  <div id="3a" style="width: 620px; background: #EDE7D8; border-radius: 8px; padding: 24px;">
+    <div style="display: inline-block; background: #315343; color: #F3EFE6; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 3px; margin-bottom: 14px;">3a — Single Peak Line Draw</div>
+    <div style="position: relative; width: 100%; height: 110px; background: #F3EFE6; border-radius: 6px; overflow: hidden;">
+      <svg viewBox="0 0 600 110" style="position: absolute; inset: 0; width: 100%; height: 100%;" preserveAspectRatio="none">
+        <path d="M0 95 L90 95 L150 35 L200 70 L260 20 L320 75 L380 40 L440 90 L520 55 L600 95" fill="none" stroke="#315343" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: mtnDraw3a 6s ease-in-out infinite;"/>
+        <circle cx="260" cy="20" r="4" fill="#C8A977"/>
+      </svg>
+    </div>
+    <p style="color: #6b6255; font-size: 12.5px; margin: 14px 0 0;">A single continuous Pine-green line sketches a full mountain range on a loop, with a small camel-toned peak marker.</p>
+  </div>
+
+  <div id="3b" style="width: 620px; background: #EDE7D8; border-radius: 8px; padding: 24px;">
+    <div style="display: inline-block; background: #315343; color: #F3EFE6; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 3px; margin-bottom: 14px;">3b — Peaks &amp; Drifting Clouds</div>
+    <div style="position: relative; width: 100%; height: 110px; background: #F3EFE6; border-radius: 6px; overflow: hidden;">
+      <svg viewBox="0 0 600 110" style="position: absolute; inset: 0; width: 100%; height: 100%;" preserveAspectRatio="none">
+        <path d="M0 95 L90 95 L150 35 L200 70 L260 20 L320 75 L380 40 L440 90 L520 55 L600 95" fill="none" stroke="#315343" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: mtnDraw3a 6s ease-in-out infinite;"/>
+      </svg>
+      <svg width="70" height="26" viewBox="0 0 70 26" style="position: absolute; top: 14px; left: 30px; animation: cloudDrift3b 8s ease-in-out infinite alternate;"><ellipse cx="20" cy="16" rx="18" ry="9" fill="#F3EFE6" stroke="#8CA184" stroke-width="1.5"/><ellipse cx="40" cy="12" rx="14" ry="10" fill="#F3EFE6" stroke="#8CA184" stroke-width="1.5"/></svg>
+      <svg width="50" height="20" viewBox="0 0 70 26" style="position: absolute; top: 34px; left: 380px; animation: cloudDrift3b 11s ease-in-out infinite alternate 1s;"><ellipse cx="20" cy="16" rx="18" ry="9" fill="#F3EFE6" stroke="#8CA184" stroke-width="1.5"/><ellipse cx="40" cy="12" rx="14" ry="10" fill="#F3EFE6" stroke="#8CA184" stroke-width="1.5"/></svg>
+    </div>
+    <p style="color: #6b6255; font-size: 12.5px; margin: 14px 0 0;">Same drawn peaks, plus two soft cloud outlines gently drifting side to side behind the ridge for extra depth.</p>
+  </div>
+
+  <div id="3c" style="width: 620px; background: #EDE7D8; border-radius: 8px; padding: 24px;">
+    <div style="display: inline-block; background: #315343; color: #F3EFE6; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 3px; margin-bottom: 14px;">3c — Layered Depth Draw</div>
+    <div style="position: relative; width: 100%; height: 110px; background: #F3EFE6; border-radius: 6px; overflow: hidden;">
+      <svg viewBox="0 0 600 110" style="position: absolute; inset: 0; width: 100%; height: 100%;" preserveAspectRatio="none">
+        <path d="M0 100 L100 60 L190 90 L280 45 L370 85 L470 55 L600 100" fill="none" stroke="#8CA184" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="stroke-dasharray: 800; stroke-dashoffset: 800; animation: mtnDrawBack3c 7s ease-in-out infinite;"/>
+        <path d="M0 95 L90 95 L150 35 L200 70 L260 20 L320 75 L380 40 L440 90 L520 55 L600 95" fill="none" stroke="#315343" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="stroke-dasharray: 700; stroke-dashoffset: 700; animation: mtnDrawFront3c 7s ease-in-out infinite;"/>
+      </svg>
+    </div>
+    <p style="color: #6b6255; font-size: 12.5px; margin: 14px 0 0;">A faint Juniper background ridge draws first, then the bold Pine foreground ridge follows — reads as layered valley depth.</p>
+  </div>
+</section>
+
+<section style="display: flex; flex-wrap: wrap; gap: 32px; padding: 32px; align-items: flex-start; font-family: 'Montserrat', sans-serif;">
+  <div id="2a" style="width: 620px; background: #EDE7D8; border-radius: 8px; padding: 24px;">
+    <div style="display: inline-block; background: #315343; color: #F3EFE6; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 3px; margin-bottom: 14px;">2a — Ridgeline Hiker</div>
+    <div style="position: relative; width: 100%; height: 110px; background: #F3EFE6; border-radius: 6px; overflow: hidden;">
+      <svg viewBox="0 0 600 110" style="position: absolute; inset: 0; width: 100%; height: 100%;" preserveAspectRatio="none">
+        <path d="M0 90 L80 40 L140 70 L220 20 L300 65 L380 30 L460 75 L540 45 L600 90 L600 110 L0 110 Z" fill="#8CA184" opacity="0.55"/>
+        <path d="M0 100 L60 60 L130 85 L210 45 L290 88 L370 55 L450 95 L530 60 L600 100 L600 110 L0 110 Z" fill="#60745B" opacity="0.7"/>
+      </svg>
+      <div style="position: absolute; top: 14px; right: 60px; width: 22px; height: 22px; border-radius: 50%; background: #C8A977; animation: sunDrift2a 6s ease-in-out infinite alternate;"></div>
+      <div style="position: absolute; bottom: 30px; left: -6%; font-size: 20px; animation: hikerWalk2a 14s linear infinite;">🥾</div>
+    </div>
+    <p style="color: #6b6255; font-size: 12.5px; margin: 14px 0 0;">A tiny hiker crosses a two-tone ridgeline silhouette while the sun gently drifts — quiet, scenic, evokes the valley skyline.</p>
+  </div>
+
+  <div id="2b" style="width: 620px; background: #EDE7D8; border-radius: 8px; padding: 24px;">
+    <div style="display: inline-block; background: #315343; color: #F3EFE6; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 3px; margin-bottom: 14px;">2b — Trail That Draws Itself</div>
+    <div style="position: relative; width: 100%; height: 110px; background: #F3EFE6; border-radius: 6px; overflow: hidden;">
+      <svg viewBox="0 0 600 110" style="position: absolute; inset: 0; width: 100%; height: 100%;" preserveAspectRatio="none">
+        <path d="M10 90 C 100 40, 180 100, 260 55 S 420 20, 500 60 S 580 90, 590 50" fill="none" stroke="#A55B3F" stroke-width="3" stroke-dasharray="6 10" stroke-linecap="round" style="stroke-dasharray: 900; stroke-dashoffset: 900; animation: trailDraw2b 5s ease-in-out infinite;"/>
+        <circle cx="10" cy="90" r="5" fill="#315343" style="animation: markerPulse2b 2s ease-in-out infinite;"/>
+      </svg>
+    </div>
+    <p style="color: #6b6255; font-size: 12.5px; margin: 14px 0 0;">A rust dashed trail draws itself across the section on a loop, with a pulsing trailhead marker — reads as "the path ahead."</p>
+  </div>
+
+  <div id="2c" style="width: 620px; background: #EDE7D8; border-radius: 8px; padding: 24px;">
+    <div style="display: inline-block; background: #315343; color: #F3EFE6; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 3px; margin-bottom: 14px;">2c — Birds Over the Valley</div>
+    <div style="position: relative; width: 100%; height: 110px; background: #F3EFE6; border-radius: 6px; overflow: hidden;">
+      <svg viewBox="0 0 600 110" style="position: absolute; inset: 0; width: 100%; height: 100%;" preserveAspectRatio="none">
+        <path d="M0 95 L100 55 L200 80 L320 35 L420 75 L520 50 L600 95 L600 110 L0 110 Z" fill="#8CA184" opacity="0.5"/>
+      </svg>
+      <svg width="26" height="14" viewBox="0 0 26 14" style="position: absolute; top: 22px; left: -8%; animation: birdFly2c 9s linear infinite;"><path d="M1 7 Q7 0 13 7 Q19 0 25 7" fill="none" stroke="#315343" stroke-width="2" stroke-linecap="round"/></svg>
+      <svg width="20" height="11" viewBox="0 0 26 14" style="position: absolute; top: 44px; left: -8%; animation: birdFly2c 12s linear infinite 2.5s;"><path d="M1 7 Q7 0 13 7 Q19 0 25 7" fill="none" stroke="#60745B" stroke-width="2" stroke-linecap="round"/></svg>
+      <svg width="16" height="9" viewBox="0 0 26 14" style="position: absolute; top: 12px; left: -8%; animation: birdFly2c 15s linear infinite 5.5s;"><path d="M1 7 Q7 0 13 7 Q19 0 25 7" fill="none" stroke="#A55B3F" stroke-width="2" stroke-linecap="round"/></svg>
+    </div>
+    <p style="color: #6b6255; font-size: 12.5px; margin: 14px 0 0;">Three small line-art birds drift across the ridgeline at staggered speeds and heights — the most understated, ambient option.</p>
+  </div>
+</section>
+
+<section style="display: flex; flex-wrap: wrap; gap: 32px; padding: 32px; align-items: flex-start; font-family: 'Montserrat', sans-serif;">
+  <div id="1a" style="width: 620px; background: #EDE7D8; border-radius: 8px; padding: 24px;">
+    <div style="display: inline-block; background: #315343; color: #F3EFE6; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 3px; margin-bottom: 14px;">1a — Lift &amp; Shadow Cards</div>
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <div style="background: #FFFFFF; border-radius: 6px; padding: 24px; transition: transform 0.25s ease, box-shadow 0.25s ease; cursor: pointer;" style-hover="transform: translateY(-6px); box-shadow: 0 14px 28px rgba(49,83,67,0.18);">
+        <h3 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: 18px; margin: 0 0 8px;">Custom Orthotics</h3>
+        <p style="color: #4a5a4e; font-size: 14px; line-height: 1.6; margin: 0;">Prescription devices designed and fabricated for your unique biomechanics.</p>
+      </div>
+      <div style="background: #FFFFFF; border-radius: 6px; padding: 24px; transition: transform 0.25s ease, box-shadow 0.25s ease; cursor: pointer;" style-hover="transform: translateY(-6px); box-shadow: 0 14px 28px rgba(49,83,67,0.18);">
+        <h3 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: 18px; margin: 0 0 8px;">Biomechanical &amp; Gait Assessments</h3>
+        <p style="color: #4a5a4e; font-size: 14px; line-height: 1.6; margin: 0;">A detailed evaluation of how your feet and lower limbs function.</p>
+      </div>
+      <div style="background: #FFFFFF; border-radius: 6px; padding: 24px; transition: transform 0.25s ease, box-shadow 0.25s ease; cursor: pointer;" style-hover="transform: translateY(-6px); box-shadow: 0 14px 28px rgba(49,83,67,0.18);">
+        <h3 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: 18px; margin: 0 0 8px;">Footwear Fitting &amp; Recommendations</h3>
+        <p style="color: #4a5a4e; font-size: 14px; line-height: 1.6; margin: 0;">Personalized guidance to find shoes that support your feet.</p>
+      </div>
+    </div>
+    <p style="color: #6b6255; font-size: 12.5px; margin: 14px 0 0;">Whole card lifts and gains a soft shadow on hover — clean, subtle, works well with the existing white cards.</p>
+  </div>
+
+  <div id="1b" style="width: 620px; background: #EDE7D8; border-radius: 8px; padding: 24px;">
+    <div style="display: inline-block; background: #315343; color: #F3EFE6; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 3px; margin-bottom: 14px;">1b — Sliding Accent Border</div>
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <div style="background: #FFFFFF; border-radius: 6px; padding: 24px; padding-left: 20px; border-left: 4px solid transparent; transition: border-color 0.25s ease, background 0.25s ease, padding-left 0.25s ease; cursor: pointer;" style-hover="border-left-color: #A55B3F; background: #FBF8F1; padding-left: 28px;">
+        <h3 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: 18px; margin: 0 0 8px;">Custom Orthotics</h3>
+        <p style="color: #4a5a4e; font-size: 14px; line-height: 1.6; margin: 0;">Prescription devices designed and fabricated for your unique biomechanics.</p>
+      </div>
+      <div style="background: #FFFFFF; border-radius: 6px; padding: 24px; padding-left: 20px; border-left: 4px solid transparent; transition: border-color 0.25s ease, background 0.25s ease, padding-left 0.25s ease; cursor: pointer;" style-hover="border-left-color: #A55B3F; background: #FBF8F1; padding-left: 28px;">
+        <h3 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: 18px; margin: 0 0 8px;">Biomechanical &amp; Gait Assessments</h3>
+        <p style="color: #4a5a4e; font-size: 14px; line-height: 1.6; margin: 0;">A detailed evaluation of how your feet and lower limbs function.</p>
+      </div>
+      <div style="background: #FFFFFF; border-radius: 6px; padding: 24px; padding-left: 20px; border-left: 4px solid transparent; transition: border-color 0.25s ease, background 0.25s ease, padding-left 0.25s ease; cursor: pointer;" style-hover="border-left-color: #A55B3F; background: #FBF8F1; padding-left: 28px;">
+        <h3 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: 18px; margin: 0 0 8px;">Footwear Fitting &amp; Recommendations</h3>
+        <p style="color: #4a5a4e; font-size: 14px; line-height: 1.6; margin: 0;">Personalized guidance to find shoes that support your feet.</p>
+      </div>
+    </div>
+    <p style="color: #6b6255; font-size: 12.5px; margin: 14px 0 0;">A rust accent bar slides in from the left and the card nudges right, background warms slightly — good if you want a directional, "read-me" cue.</p>
+  </div>
+
+  <div id="1c" style="width: 620px; background: #EDE7D8; border-radius: 8px; padding: 24px;">
+    <div style="display: inline-block; background: #315343; color: #F3EFE6; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 3px; margin-bottom: 14px;">1c — Fill &amp; Invert</div>
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <div style="background: #FFFFFF; border-radius: 6px; padding: 24px; transition: background 0.25s ease; cursor: pointer;" style-hover="background: #315343;">
+        <h3 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: 18px; margin: 0 0 8px; transition: color 0.25s ease;" style-hover="color: #F3EFE6;">Custom Orthotics</h3>
+        <p style="color: #4a5a4e; font-size: 14px; line-height: 1.6; margin: 0; transition: color 0.25s ease;" style-hover="color: #DCE3D8;">Prescription devices designed and fabricated for your unique biomechanics.</p>
+      </div>
+      <div style="background: #FFFFFF; border-radius: 6px; padding: 24px; transition: background 0.25s ease; cursor: pointer;" style-hover="background: #315343;">
+        <h3 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: 18px; margin: 0 0 8px; transition: color 0.25s ease;" style-hover="color: #F3EFE6;">Biomechanical &amp; Gait Assessments</h3>
+        <p style="color: #4a5a4e; font-size: 14px; line-height: 1.6; margin: 0; transition: color 0.25s ease;" style-hover="color: #DCE3D8;">A detailed evaluation of how your feet and lower limbs function.</p>
+      </div>
+      <div style="background: #FFFFFF; border-radius: 6px; padding: 24px; transition: background 0.25s ease; cursor: pointer;" style-hover="background: #315343;">
+        <h3 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: 18px; margin: 0 0 8px; transition: color 0.25s ease;" style-hover="color: #F3EFE6;">Footwear Fitting &amp; Recommendations</h3>
+        <p style="color: #4a5a4e; font-size: 14px; line-height: 1.6; margin: 0; transition: color 0.25s ease;" style-hover="color: #DCE3D8;">Personalized guidance to find shoes that support your feet.</p>
+      </div>
+    </div>
+    <p style="color: #6b6255; font-size: 12.5px; margin: 14px 0 0;">Card fills with Pine and text flips to cream — bold, most noticeably "separate," best if you want strong visual punch.</p>
+  </div>
+</section>
 
 <div style="font-family: 'Montserrat', sans-serif; background: #F3EFE6; color: #24352C; min-height: 100vh;">
 
@@ -66,7 +210,7 @@
     <div style="max-width: 1240px; margin: 0 auto; padding: {{ headerPadding }} 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; transition: padding 0.3s ease;">
       <a href="#" onClick="{{ goHome }}" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
         <img src="assets/logo-icon.png" alt="Elk Valley Orthotics logo" style="height: {{ logoSize }}; width: {{ logoSize }}; object-fit: contain; transition: height 0.3s ease, width 0.3s ease;" />
-        <span style="font-family: 'Hussar Ekologiczne', sans-serif; font-size: 19px; color: #2A4436; letter-spacing: 0.01em;">Elk Valley Orthotics</span>
+        <span style="font-family: 'Hussar Bold', sans-serif; font-size: 19px; color: #2A4436; letter-spacing: 0.01em;">Elk Valley Orthotics</span>
       </a>
 
       <nav style="display: {{ desktopNavDisplay }}; align-items: center; gap: 30px;">
@@ -132,26 +276,26 @@
           <p style="color: #A55B3F; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 13px; margin: 0 0 10px;">Services</p>
           <h2 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(24px, 3.5vw, 32px); margin: 0 0 48px;">Our Services</h2>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 24px;">
-            <div style="background: #F3EFE6; border-radius: 6px; padding: 36px 26px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <div style="background: #F3EFE6; border-radius: 6px; padding: 36px 26px; display: flex; flex-direction: column; align-items: center; text-align: center; border-left: 4px solid transparent; transition: border-color 0.25s ease, background 0.25s ease; cursor: pointer;" style-hover="border-left-color: #A55B3F; background: #FAF7EF;">
               <img src="assets/logo-icon.png" alt="Elk Valley Orthotics foot logo" style="width: 64px; height: 64px; object-fit: contain; margin-bottom: 18px;" />
               <h3 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: 16px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 12px;">Custom Orthotics</h3>
               <p style="color: #4a5a4e; font-size: 14.5px; line-height: 1.6; margin: 0 0 20px; flex-grow: 1;">Individually designed to improve alignment, reduce pain, and support your lifestyle.</p>
               <a href="#" onClick="{{ goServices }}" style="text-decoration: none; background: #A55B3F; color: #F3EFE6; font-weight: 700; font-size: 13.5px; padding: 11px 22px; border-radius: 3px; display: inline-block; white-space: nowrap;" style-hover="background: #8c4a32;">Learn More</a>
             </div>
-            <div style="background: #F3EFE6; border-radius: 6px; padding: 36px 26px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <div style="background: #F3EFE6; border-radius: 6px; padding: 36px 26px; display: flex; flex-direction: column; align-items: center; text-align: center; border-left: 4px solid transparent; transition: border-color 0.25s ease, background 0.25s ease; cursor: pointer;" style-hover="border-left-color: #A55B3F; background: #FAF7EF;">
               <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#315343" stroke-width="2.2" style="margin-bottom: 18px;"><rect x="14" y="10" width="36" height="46" rx="3"/><path d="M24 8h16v6H24z"/><path d="M21 26l3 3 6-6M21 36l3 3 6-6M21 46l3 3 6-6"/><path d="M32 27h10M32 37h10M32 47h10"/></svg>
               <h3 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: 16px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 12px;">Foot &amp; Gait Assessments</h3>
               <p style="color: #4a5a4e; font-size: 14.5px; line-height: 1.6; margin: 0 0 20px; flex-grow: 1;">A thorough assessment to identify the source of discomfort and recommend the right treatment.</p>
               <a href="#" onClick="{{ goServices }}" style="text-decoration: none; background: #A55B3F; color: #F3EFE6; font-weight: 700; font-size: 13.5px; padding: 11px 22px; border-radius: 3px; display: inline-block; white-space: nowrap;" style-hover="background: #8c4a32;">Learn More</a>
             </div>
-            <div style="background: #F3EFE6; border-radius: 6px; padding: 36px 26px; display: flex; flex-direction: column; align-items: center; text-align: center;">
-              <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#315343" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 18px;"><path d="M8 46c0-4 1-6 2-8 2-4 4-6 4-8 1-4 4-6 6-6l8-2c2 0 3 1 4 3l2 6c1 2 3 3 5 4l10 4c5 2 8 4 8 8 0 3-2 5-6 5H14c-4 0-6-2-6-4z"/><path d="M8 46h52"/><path d="M20 26l6 6M24 22l6 6M28 18l6 6"/></svg>
+            <div style="background: #F3EFE6; border-radius: 6px; padding: 36px 26px; display: flex; flex-direction: column; align-items: center; text-align: center; border-left: 4px solid transparent; transition: border-color 0.25s ease, background 0.25s ease; cursor: pointer;" style-hover="border-left-color: #A55B3F; background: #FAF7EF;">
+              <img src="assets/icon-shoe-transparent.png" alt="Footwear recommendations icon" style="width: 96px; height: 96px; object-fit: contain; margin-bottom: 18px; filter: brightness(0) saturate(100%) invert(23%) sepia(24%) saturate(1573%) hue-rotate(122deg) brightness(94%) contrast(92%) drop-shadow(0 0 0.4px #315343) drop-shadow(0 0 0.4px #315343);" />
               <h3 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: 16px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 12px;">Footwear Recommendations</h3>
               <p style="color: #4a5a4e; font-size: 14.5px; line-height: 1.6; margin: 0 0 20px; flex-grow: 1;">Expert guidance to help you find shoes that work with your feet — not against them.</p>
               <a href="#" onClick="{{ goServices }}" style="text-decoration: none; background: #A55B3F; color: #F3EFE6; font-weight: 700; font-size: 13.5px; padding: 11px 22px; border-radius: 3px; display: inline-block; white-space: nowrap;" style-hover="background: #8c4a32;">Learn More</a>
             </div>
-            <div style="background: #F3EFE6; border-radius: 6px; padding: 36px 26px; display: flex; flex-direction: column; align-items: center; text-align: center;">
-              <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#315343" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 18px;"><path d="M22 8h16v20c0 3 2 5 4 8l7 8c3 4 3 9-2 11-3 1.5-6 1.5-9 1H26c-6 0-10-4-10-10V18c0-6 2-10 6-10z"/><path d="M14 20h30"/></svg>
+            <div style="background: #F3EFE6; border-radius: 6px; padding: 36px 26px; display: flex; flex-direction: column; align-items: center; text-align: center; border-left: 4px solid transparent; transition: border-color 0.25s ease, background 0.25s ease; cursor: pointer;" style-hover="border-left-color: #A55B3F; background: #FAF7EF;">
+              <img src="assets/icon-sock.png" alt="Medical-grade compression icon" style="width: 96px; height: 96px; object-fit: contain; margin-bottom: 18px; filter: brightness(0) saturate(100%) invert(23%) sepia(24%) saturate(1573%) hue-rotate(122deg) brightness(94%) contrast(92%) drop-shadow(0 0 0.4px #315343) drop-shadow(0 0 0.4px #315343); transform: scaleX(-1);" />
               <h3 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: 16px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 12px;">Medical-Grade Compression</h3>
               <p style="color: #4a5a4e; font-size: 14.5px; line-height: 1.6; margin: 0 0 20px; flex-grow: 1;">Professional fitting for compression stockings to support circulation and leg health.</p>
               <a href="#" onClick="{{ goServices }}" style="text-decoration: none; background: #A55B3F; color: #F3EFE6; font-weight: 700; font-size: 13.5px; padding: 11px 22px; border-radius: 3px; display: inline-block; white-space: nowrap;" style-hover="background: #8c4a32;">Learn More</a>
@@ -159,13 +303,21 @@
           </div>
         </div>
       </section>
+
+      <!-- Mountain range animation strip -->
+      <div style="background: #F3EFE6; padding: 24px; display: flex; justify-content: center;">
+        <div style="position: relative; width: 100%; max-width: 1140px; height: 110px; overflow: hidden;">
+          <svg viewBox="0 0 1140 110" style="position: absolute; inset: 0; width: 100%; height: 100%;" preserveAspectRatio="none">
+            <path d="M0 100 L190 60 L360 90 L530 45 L700 85 L890 55 L1140 100" fill="none" stroke="#8CA184" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="stroke-dasharray: 1500; stroke-dashoffset: 1500; animation: mtnDrawBack3c 7s ease-in-out infinite;"></path>
+            <path d="M0 95 L170 95 L285 35 L380 70 L495 20 L610 75 L725 40 L840 90 L990 55 L1140 95" fill="none" stroke="#315343" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="stroke-dasharray: 1300; stroke-dashoffset: 1300; animation: mtnDrawFront3c 7s ease-in-out infinite;"></path>
+          </svg>
+        </div>
+      </div>
     </div>
   </sc-if>
-
-  <!-- ============ ABOUT ============ -->
   <sc-if value="{{ isAbout }}" hint-placeholder-val="{{ false }}">
     <div style="max-width: 900px; margin: 0 auto; padding: {{ innerSectionPad }};">
-      <p style="color: #A55B3F; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 13px; margin: 0 0 10px;">ABOUT</p>
+      <p style="color: #315343; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 14px; margin: 0 0 10px;">ABOUT</p>
       <h1 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(28px, 4vw, 38px); margin: 0 0 32px;">About Kendra &amp; Pedorthics in Fernie</h1>
 
       <div style="display: grid; grid-template-columns: {{ aboutImgGridCols }}; gap: {{ aboutImgGap }}; align-items: start; margin-bottom: 56px;">
@@ -186,7 +338,7 @@
         <p style="color: #4a5a4e; font-size: 16px; line-height: 1.75; margin: 0 0 32px;">Pedorthists are nationally credited professionals who meet education, clinical training, and continuing competency standards to provide evidenced-based pedorthic care.</p>
         <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
           <img src="assets/college-pedorthics-logo.png" alt="The College of Pedorthics of Canada logo" style="height: 60px; width: auto; object-fit: contain;" />
-          <img src="assets/pedorthic-association-logo.jpg" alt="Pedorthic Association of Canada logo" style="height: 90px; width: auto; object-fit: contain;" />
+          <img src="assets/pedorthic-association-logo.png" alt="Pedorthic Association of Canada logo" style="height: 90px; width: auto; object-fit: contain;" />
         </div>
       </div>
     </div>
@@ -195,11 +347,11 @@
   <!-- ============ SERVICES ============ -->
   <sc-if value="{{ isServices }}" hint-placeholder-val="{{ false }}">
     <div style="max-width: 1100px; margin: 0 auto; padding: {{ innerSectionPad }};">
-      <p style="color: #A55B3F; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 13px; margin: 0 0 10px;">Services &amp; Products</p>
+      <p style="color: #315343; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 14px; margin: 0 0 10px;">SERVICES</p>
       <h1 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(28px, 4vw, 38px); margin: 0 0 40px;">Orthotics Services in Fernie, BC</h1>
-      <div style="display: flex; flex-direction: column; gap: 0;">
+      <div style="display: flex; flex-direction: column; gap: 16px;">
         <sc-for list="{{ services }}" as="svc" hint-placeholder-count="5">
-          <div style="border-bottom: 1px solid rgba(49,83,67,0.15); padding: 32px 4px;">
+          <div style="background: #F3EFE6; border-radius: 6px; padding: 32px; padding-left: 28px; border-left: 4px solid transparent; transition: border-color 0.25s ease, background 0.25s ease, padding-left 0.25s ease; cursor: pointer;" style-hover="border-left-color: #A55B3F; background: #FAF7EF; padding-left: 36px;">
             <h3 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: 21px; margin: 0 0 12px;">{{ svc.title }}</h3>
             <p style="color: #4a5a4e; font-size: 15.5px; line-height: 1.75; margin: 0; max-width: 820px;">{{ svc.desc }}</p>
           </div>
@@ -211,13 +363,13 @@
   <!-- ============ FAQ ============ -->
   <sc-if value="{{ isFaq }}" hint-placeholder-val="{{ false }}">
     <div style="max-width: 800px; margin: 0 auto; padding: {{ innerSectionPad }};">
-      <p style="color: #A55B3F; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 13px; margin: 0 0 10px;">FAQ</p>
+      <p style="color: #315343; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 14px; margin: 0 0 10px;">FAQ</p>
       <h1 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(28px, 4vw, 38px); margin: 0 0 40px;">Process &amp; What to Expect</h1>
       <div style="display: flex; flex-direction: column; gap: 8px;">
         <sc-for list="{{ faqs }}" as="faq" hint-placeholder-count="5">
           <div style="border-bottom: 1px solid rgba(49,83,67,0.15); padding: 30px 4px;">
             <h3 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: 17px; margin: 0 0 8px;">{{ faq.q }}</h3>
-            <p style="color: #4a5a4e; font-size: 15px; line-height: 1.6; margin: 0;">{{ faq.a }}</p>
+            <p style="color: #4a5a4e; font-size: 15px; line-height: 1.6; margin: 0; white-space: pre-line;">{{ faq.a }}</p>
           </div>
         </sc-for>
       </div>
@@ -227,17 +379,32 @@
   <!-- ============ CONTACT ============ -->
   <sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}">
     <div style="max-width: 1100px; margin: 0 auto; padding: {{ innerSectionPad }};">
-      <p style="color: #A55B3F; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 13px; margin: 0 0 10px;">Contact</p>
+      <p style="color: #315343; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 14px; margin: 0 0 10px;">CONTACT</p>
       <h1 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(28px, 4vw, 38px); margin: 0 0 40px;">Contact Our Fernie Clinic</h1>
 
       <div style="display: grid; grid-template-columns: {{ contactGridCols }}; gap: 40px;">
-        <form style="display: flex; flex-direction: column; gap: 14px;">
-          <input type="text" placeholder="Name" style="padding: 14px; border: 1px solid rgba(49,83,67,0.25); border-radius: 3px; font-family: 'Montserrat', sans-serif; font-size: 16px; background: #FFFFFF; min-height: 44px; box-sizing: border-box;" />
-          <input type="email" placeholder="Email" style="padding: 14px; border: 1px solid rgba(49,83,67,0.25); border-radius: 3px; font-family: 'Montserrat', sans-serif; font-size: 16px; background: #FFFFFF; min-height: 44px; box-sizing: border-box;" />
-          <input type="tel" placeholder="Phone" style="padding: 14px; border: 1px solid rgba(49,83,67,0.25); border-radius: 3px; font-family: 'Montserrat', sans-serif; font-size: 16px; background: #FFFFFF; min-height: 44px; box-sizing: border-box;" />
-          <textarea placeholder="Message" rows="5" style="padding: 14px; border: 1px solid rgba(49,83,67,0.25); border-radius: 3px; font-family: 'Montserrat', sans-serif; font-size: 16px; resize: vertical; background: #FFFFFF;"></textarea>
-          <button type="button" style="background: #A55B3F; color: #F3EFE6; border: none; font-weight: 700; font-size: 15px; padding: 14px; border-radius: 3px; cursor: pointer; min-height: 44px;">Send Message</button>
-          <p style="color: #8a8171; font-size: 12.5px; margin: 4px 0 0;">Form is a placeholder — needs to be wired to an email/booking service.</p>
+        <form onSubmit="{{ handleSubmit }}" style="display: flex; flex-direction: column; gap: 6px;">
+          <input type="text" placeholder="Name" value="{{ formName }}" onChange="{{ setName }}" style="padding: 14px; border: 1px solid {{ nameBorder }}; border-radius: 3px; font-family: 'Montserrat', sans-serif; font-size: 16px; background: #FFFFFF; min-height: 44px; box-sizing: border-box;" />
+          <sc-if value="{{ showErrors }}" hint-placeholder-val="{{ false }}">
+            <sc-if value="{{ nameError }}" hint-placeholder-val="{{ false }}">
+              <p style="color: #A55B3F; font-size: 13px; margin: 0 0 8px;">Please enter your name.</p>
+            </sc-if>
+          </sc-if>
+          <input type="email" placeholder="Email" value="{{ formEmail }}" onChange="{{ setEmail }}" style="padding: 14px; border: 1px solid {{ emailBorder }}; border-radius: 3px; font-family: 'Montserrat', sans-serif; font-size: 16px; background: #FFFFFF; min-height: 44px; box-sizing: border-box;" />
+          <sc-if value="{{ showErrors }}" hint-placeholder-val="{{ false }}">
+            <sc-if value="{{ emailError }}" hint-placeholder-val="{{ false }}">
+              <p style="color: #A55B3F; font-size: 13px; margin: 0 0 8px;">Please enter a valid email address.</p>
+            </sc-if>
+          </sc-if>
+          <input type="tel" placeholder="Phone" value="{{ formPhone }}" onChange="{{ setPhone }}" style="padding: 14px; border: 1px solid rgba(49,83,67,0.25); border-radius: 3px; font-family: 'Montserrat', sans-serif; font-size: 16px; background: #FFFFFF; min-height: 44px; box-sizing: border-box; margin-bottom: 8px;" />
+          <textarea placeholder="Message" rows="5" value="{{ formMessage }}" onChange="{{ setMessage }}" style="padding: 14px; border: 1px solid {{ messageBorder }}; border-radius: 3px; font-family: 'Montserrat', sans-serif; font-size: 16px; resize: vertical; background: #FFFFFF;"></textarea>
+          <sc-if value="{{ showErrors }}" hint-placeholder-val="{{ false }}">
+            <sc-if value="{{ messageError }}" hint-placeholder-val="{{ false }}">
+              <p style="color: #A55B3F; font-size: 13px; margin: 0 0 8px;">Please enter a message.</p>
+            </sc-if>
+          </sc-if>
+          <button type="submit" style="background: #A55B3F; color: #F3EFE6; border: none; font-weight: 700; font-size: 15px; padding: 14px; border-radius: 3px; cursor: pointer; min-height: 44px; margin-top: 8px;">Send Message</button>
+          <p style="color: #8a8171; font-size: 12.5px; margin: 4px 0 0;">Submitting opens your email app with a message addressed to kendra@elkvalleyorthotics.ca.</p>
 
           <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 14.5px; color: #4a5a4e;">
             <span>[COMING SOON] Street address, Fernie, BC</span>
@@ -246,10 +413,8 @@
           </div>
         </form>
 
-        <div style="min-height: 320px; border-radius: 4px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: repeating-linear-gradient(45deg, #C8A977 0px, #C8A977 18px, #bda067 18px, #bda067 36px);">
-          <div style="border: 2px dashed rgba(49,83,67,0.5); padding: 22px 28px; text-align: center; background: rgba(243,239,230,0.55);">
-            <div style="font-family: 'Montserrat', sans-serif; font-size: 12.5px; letter-spacing: 0.04em; color: #315343; text-transform: uppercase; line-height: 1.7;">[COMING SOON]<br/>Map embed</div>
-          </div>
+        <div style="min-height: 320px; border-radius: 4px; overflow: hidden;">
+          <iframe title="Map of Fernie, British Columbia" src="https://www.google.com/maps?q=Fernie,+British+Columbia,+Canada&output=embed" style="width: 100%; height: 100%; min-height: 320px; border: 0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
@@ -260,7 +425,7 @@
     <div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: {{ footerDirection }}; flex-wrap: wrap; justify-content: space-between; align-items: {{ footerAlign }}; gap: 24px; padding-bottom: 28px; border-bottom: 1px solid rgba(243,239,230,0.15);">
       <div style="display: flex; align-items: center; gap: 10px;">
         <img src="assets/logo-icon.png" alt="Elk Valley Orthotics icon" style="height: 44px; width: 44px; object-fit: contain;" />
-        <span style="font-family: 'Hussar Ekologiczne', sans-serif; font-size: 15px; color: #F3EFE6;">Elk Valley Orthotics</span>
+        <span style="font-family: 'Hussar Bold', sans-serif; font-size: 15px; color: #F3EFE6;">Elk Valley Orthotics</span>
       </div>
       <div style="display: flex; gap: 24px; flex-wrap: wrap;">
         <a href="#" onClick="{{ goHome }}" style="text-decoration: none; color: #B7C2B6; font-size: 14px;">Home</a>
@@ -279,7 +444,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { mobileNavOpen: false, isMobile: false, page: 'home', scrolled: false, headerHidden: false };
+  state = { mobileNavOpen: false, isMobile: false, page: 'home', scrolled: false, headerHidden: false, formName: '', formEmail: '', formPhone: '', formMessage: '', showErrors: false };
 
   pageMeta = {
     home: { title: 'Fernie Orthotics | Elk Valley Orthotics — Custom Orthotics in Fernie, BC', desc: 'Fernie orthotics clinic offering custom foot orthotics and pedorthic care for the active people of Fernie and the Elk Valley — Sparwood, Elkford, Elko & Kimberley, BC.' },
@@ -335,6 +500,21 @@ class Component extends DCLogic {
   }
   go(page) { return (e) => { if (e) e.preventDefault(); window.location.hash = page === 'home' ? '' : page; this.setState({ page, mobileNavOpen: false }); this.updateMeta(page); window.scrollTo(0, 0); }; }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    const { formName, formEmail, formMessage } = this.state;
+    const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formEmail.trim());
+    if (!formName.trim() || !emailValid || !formMessage.trim()) {
+      this.setState({ showErrors: true });
+      return;
+    }
+    const subject = encodeURIComponent('Website inquiry from ' + formName);
+    const body = encodeURIComponent(
+      formMessage + '\n\n---\nName: ' + formName + '\nEmail: ' + formEmail + (this.state.formPhone ? '\nPhone: ' + this.state.formPhone : '')
+    );
+    window.location.href = 'mailto:kendra@elkvalleyorthotics.ca?subject=' + subject + '&body=' + body;
+  }
+
   services = [
     { title: 'Custom Orthotics', desc: "Custom foot orthotics are prescription medical devices designed specifically for your feet to improve alignment, redistribute pressure, and optimize lower limb biomechanics. Following a comprehensive biomechanical assessment, your orthotics are custom-designed and fabricated by your Canadian Certified Pedorthist to address your unique foot structure, gait, and clinical needs. Pedorthists have specialized training in orthotic design, materials, and fabrication, allowing each device to be tailored to your individual biomechanics, footwear preferences, and treatment goals." },
     { title: 'Biomechanical & Gait Assessments', desc: "A biomechanical and gait assessment provides a detailed evaluation of how your feet and lower limbs function during both standing and walking. Your Canadian Certified Pedorthist will review your medical history and symptoms before assessing foot posture, lower limb alignment, joint range of motion, muscle strength, gait mechanics, balance, areas of increased pressure, footwear wear patterns, and overall biomechanics. The information gathered is used to develop an individualized treatment plan that fits your lifestyle while improving comfort, mobility, and long-term function." },
@@ -344,11 +524,12 @@ class Component extends DCLogic {
   ];
 
   faqs = [
-    { q: 'What should I expect at my first appointment?', a: '[COMING SOON] A description of the initial assessment process.' },
-    { q: 'Do I need a referral?', a: '[COMING SOON] A description of referral requirements.' },
-    { q: 'How long does it take to receive my orthotics?', a: '[COMING SOON] A description of fabrication turnaround time.' },
-    { q: 'Are orthotics covered by insurance?', a: '[COMING SOON] A description of insurance/coverage info.' },
-    { q: 'What treatment options are available?', a: '[COMING SOON] A description of treatment options offered.' }
+    { q: 'What should I expect at my first appointment?', a: "Your first appointment is all about getting to know you and understanding what's keeping you from moving comfortably. We'll take the time to discuss your symptoms, medical history, daily activities, and goals so we can understand how your feet and lower limbs affect your everyday life.\n\nPlease bring any footwear you're currently wearing to your appointment, and wear shorts or loose-fitting pants that allow you to move freely so we can properly assess your movement.\n\nWe'll complete a thorough biomechanical and gait assessment, looking at how you stand, walk, and move, as well as the fit and condition of your footwear. We'll explain our findings in clear, easy-to-understand terms, answer any questions you may have, and work with you to develop a personalized treatment plan that fits your needs and lifestyle.\n\nWhether that includes custom foot orthotics, footwear recommendations, medical-grade compression, or simply education and advice, you'll leave your appointment with a better understanding of what's causing your symptoms and the next steps toward feeling your best." },
+    { q: 'Does every patient require custom orthotics?', a: "No. While custom foot orthotics can effectively treat many conditions, they aren't the right solution for everyone. Our goal is to recommend the most appropriate treatment based on your individual needs—not to prescribe orthotics unless they're truly necessary.\n\nIn some cases, supportive footwear, medical-grade compression, stretching and strengthening exercises, or simple footwear modifications may be all that's needed. If custom orthotics are recommended, we'll explain why they're appropriate for your condition and how they can help you achieve your goals. We also offer off-the-shelf and budget-friendly options." },
+    { q: 'Do I need a referral?', a: "No, you don't need a referral to book an appointment with a Canadian Certified Pedorthist. You can schedule an assessment directly at any time.\n\nHowever, some extended health insurance plans require a physician's referral or prescription for reimbursement of services or custom foot orthotics. We recommend checking with your insurance provider before your appointment to understand your specific coverage requirements. Which leads us to the next question:" },
+    { q: 'Are custom orthotics covered by insurance?', a: "Many extended health insurance plans provide coverage for custom foot orthotics, but coverage varies depending on your individual plan. Some insurers also require a physician's prescription or referral for reimbursement.\n\nIf you're unsure about your coverage, we recommend contacting your insurance provider before your appointment. We DO NOT direct bill for any services, but we're happy to provide the documentation needed to support your claim and can answer any questions about the process." },
+    { q: 'Are you a WorkSafeBC provider?', a: "Yes. If you're booking an appointment related to a workplace injury, please have your WorkSafeBC claim number available when you contact us. Before your appointment, you'll also need approval from your WorkSafeBC case manager authorizing pedorthic services under your claim.\n\nOnce your claim has been approved, we'll work with WorkSafeBC to provide the authorized assessment and treatment. If you're unsure whether your claim or services have been approved, please contact us before booking—we're happy to help guide you through the process. Please note that WorkSafeBC-funded services can only be provided with the required authorization." },
+    { q: 'How long does it take to receive my custom orthotics?', a: "Custom foot orthotics are typically ready within 2–3 weeks of your assessment, although timelines may vary depending on the complexity of your prescription and fabrication requirements.\n\nOnce your orthotics arrive, we'll schedule a fitting appointment to ensure they fit comfortably in your footwear and are functioning as intended. You'll also receive instructions on how to gradually break them in, along with guidance on what to expect during the adjustment period.\n\nIf you need support while your orthotics are being fabricated, we can often recommend off-the-shelf inserts, footwear modifications, or other short-term treatment options to help manage your symptoms until your custom orthotics are ready." }
   ];
 
   renderVals() {
@@ -361,7 +542,26 @@ class Component extends DCLogic {
       contact: page === 'contact' ? '#A55B3F' : '#315343'
     };
     const isMobile = this.state.isMobile;
+    const nameError = !this.state.formName.trim();
+    const emailError = !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.state.formEmail.trim());
+    const messageError = !this.state.formMessage.trim();
     return {
+      formName: this.state.formName,
+      formEmail: this.state.formEmail,
+      formPhone: this.state.formPhone,
+      formMessage: this.state.formMessage,
+      setName: (e) => this.setState({ formName: e.target.value }),
+      setEmail: (e) => this.setState({ formEmail: e.target.value }),
+      setPhone: (e) => this.setState({ formPhone: e.target.value }),
+      setMessage: (e) => this.setState({ formMessage: e.target.value }),
+      handleSubmit: (e) => this.handleSubmit(e),
+      showErrors: this.state.showErrors,
+      nameError,
+      emailError,
+      messageError,
+      nameBorder: this.state.showErrors && nameError ? '#A55B3F' : 'rgba(49,83,67,0.25)',
+      emailBorder: this.state.showErrors && emailError ? '#A55B3F' : 'rgba(49,83,67,0.25)',
+      messageBorder: this.state.showErrors && messageError ? '#A55B3F' : 'rgba(49,83,67,0.25)',
       introGridCols: isMobile ? '1fr' : 'minmax(220px, 300px) 1fr',
       introGap: isMobile ? '28px' : '64px',
       introPad: isMobile ? '64px 20px' : '130px 24px',
