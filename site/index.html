@@ -44,7 +44,8 @@
   "founder": { "@type": "Person", "name": "Kendra Sweeney" },
   "url": "https://elkvalleyorthotics.com/",
   "priceRange": "$$",
-  "medicalSpecialty": "Pedorthics"
+  "medicalSpecialty": "Pedorthics",
+  "telephone": "+1-250-268-7202"
 }
 </script>
 <style>
@@ -69,8 +70,9 @@
   @keyframes birdFly2c { 0% { transform: translateX(-8%) translateY(0); } 100% { transform: translateX(112%) translateY(-14px); } }
   @keyframes mtnDraw3a { 0% { stroke-dashoffset: 1000; } 60%, 100% { stroke-dashoffset: 0; } }
   @keyframes cloudDrift3b { 0% { transform: translateX(0); } 100% { transform: translateX(24px); } }
-  @keyframes mtnDrawBack3c { 0% { stroke-dashoffset: 1500; } 50%, 100% { stroke-dashoffset: 0; } }
-  @keyframes mtnDrawFront3c { 0% { stroke-dashoffset: 1300; } 30% { stroke-dashoffset: 1300; } 90%, 100% { stroke-dashoffset: 0; } }
+  @keyframes mtnDrawFar3c { 0% { stroke-dashoffset: 1600; } 40%, 100% { stroke-dashoffset: 0; } }
+  @keyframes mtnDrawBack3c { 0% { stroke-dashoffset: 1700; } 55%, 100% { stroke-dashoffset: 0; } }
+  @keyframes mtnDrawFront3c { 0% { stroke-dashoffset: 2400; } 30% { stroke-dashoffset: 2400; } 95%, 100% { stroke-dashoffset: 0; } }
 </style>
 </helmet>
 </section>
@@ -84,9 +86,8 @@
     </div>
     <header style="background: {{ headerBg }}; border-bottom: 1px solid rgba(49,83,67,0.15); box-shadow: {{ headerShadow }}; transition: background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;">
     <div style="max-width: 1240px; margin: 0 auto; padding: {{ headerPadding }} 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; transition: padding 0.3s ease;">
-      <a href="#" onClick="{{ goHome }}" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
-        <img src="assets/logo-icon.png" alt="Elk Valley Orthotics logo" style="height: {{ logoSize }}; width: {{ logoSize }}; object-fit: contain; transition: height 0.3s ease, width 0.3s ease;" />
-        <span style="font-family: 'Hussar Bold', sans-serif; font-size: 19px; color: #2A4436; letter-spacing: 0.01em;">Elk Valley Orthotics</span>
+      <a href="#" onClick="{{ goHome }}" style="display: flex; align-items: center; text-decoration: none;">
+        <img src="assets/logo-horizontal.png" alt="Elk Valley Orthotics" style="height: {{ logoSize }}; width: auto; object-fit: contain; transition: height 0.3s ease;" />
       </a>
 
       <nav style="display: {{ desktopNavDisplay }}; align-items: center; gap: 30px;">
@@ -126,7 +127,8 @@
       <!-- 1. Header / hero -->
       <section style="position: relative; min-height: {{ heroMinHeight }}; display: flex; align-items: center; overflow: hidden;">
         <img src="assets/hero-mountain.jpg" alt="Mountain peak at sunset near Fernie, BC" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
-        <div style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(24,36,29,0.82) 0%, rgba(24,36,29,0.55) 32%, rgba(24,36,29,0.15) 60%, rgba(24,36,29,0.05) 100%);"></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(24,36,29,0.88) 0%, rgba(24,36,29,0.78) 45%, rgba(24,36,29,0.62) 68%, rgba(24,36,29,0.25) 88%, rgba(24,36,29,0.12) 100%);"></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(24,36,29,0.12) 0%, rgba(24,36,29,0.35) 100%);"></div>
         <div style="position: relative; max-width: 1240px; margin: 0 auto; padding: {{ heroPad }}; width: 100%; box-sizing: border-box; text-align: left;">
           <div style="max-width: 540px;">
             <h1 style="font-family: 'Hussar Bold', sans-serif; color: #F3EFE6; font-size: clamp(30px, 5vw, 52px); line-height: 1.15; margin: 0 0 18px;">Personalized foot care for every step.</h1>
@@ -154,13 +156,13 @@
           <h2 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(24px, 3.5vw, 32px); margin: 0 0 48px;">Our Services</h2>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 24px;">
             <div style="background: #F3EFE6; border-radius: 6px; padding: 36px 26px; display: flex; flex-direction: column; align-items: center; text-align: center; border-left: 4px solid transparent; transition: border-color 0.25s ease, background 0.25s ease; cursor: pointer;" style-hover="border-left-color: #A55B3F; background: #FAF7EF;">
-              <img src="assets/logo-icon.png" alt="Elk Valley Orthotics foot logo" style="width: 64px; height: 64px; object-fit: contain; margin-bottom: 18px;" />
+              <svg width="96" height="96" viewBox="0 0 96 96" fill="none" stroke="#315343" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 18px;"><rect x="12" y="33" width="72" height="30" rx="4"/><path d="M24 33v11M36 33v16M48 33v11M60 33v16M72 33v11"/></svg>
               <h3 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: 16px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 12px;">Custom Orthotics</h3>
               <p style="color: #4a5a4e; font-size: 14.5px; line-height: 1.6; margin: 0 0 20px; flex-grow: 1;">Individually designed to improve alignment, reduce pain, and support your lifestyle.</p>
               <a href="#" onClick="{{ goServices }}" style="text-decoration: none; background: #A55B3F; color: #F3EFE6; font-weight: 700; font-size: 13.5px; padding: 11px 22px; border-radius: 3px; display: inline-block; white-space: nowrap;" style-hover="background: #8c4a32;">Learn More</a>
             </div>
             <div style="background: #F3EFE6; border-radius: 6px; padding: 36px 26px; display: flex; flex-direction: column; align-items: center; text-align: center; border-left: 4px solid transparent; transition: border-color 0.25s ease, background 0.25s ease; cursor: pointer;" style-hover="border-left-color: #A55B3F; background: #FAF7EF;">
-              <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#315343" stroke-width="2.2" style="margin-bottom: 18px;"><rect x="14" y="10" width="36" height="46" rx="3"/><path d="M24 8h16v6H24z"/><path d="M21 26l3 3 6-6M21 36l3 3 6-6M21 46l3 3 6-6"/><path d="M32 27h10M32 37h10M32 47h10"/></svg>
+              <svg width="96" height="96" viewBox="0 0 96 96" fill="none" stroke="#315343" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 18px;"><rect x="21" y="15" width="54" height="69" rx="5"/><path d="M36 12h24v9H36z"/><path d="M32 39l4.5 4.5 9-9M32 54l4.5 4.5 9-9M32 69l4.5 4.5 9-9"/><path d="M48 40.5h15M48 55.5h15M48 70.5h15"/></svg>
               <h3 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: 16px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 12px;">Foot &amp; Gait Assessments</h3>
               <p style="color: #4a5a4e; font-size: 14.5px; line-height: 1.6; margin: 0 0 20px; flex-grow: 1;">A thorough assessment to identify the source of discomfort and recommend the right treatment.</p>
               <a href="#" onClick="{{ goServices }}" style="text-decoration: none; background: #A55B3F; color: #F3EFE6; font-weight: 700; font-size: 13.5px; padding: 11px 22px; border-radius: 3px; display: inline-block; white-space: nowrap;" style-hover="background: #8c4a32;">Learn More</a>
@@ -185,8 +187,9 @@
       <div style="background: #F3EFE6; padding: 24px; display: flex; justify-content: center;">
         <div style="position: relative; width: 100%; max-width: 1140px; height: 110px; overflow: hidden;">
           <svg viewBox="0 0 1140 110" style="position: absolute; inset: 0; width: 100%; height: 100%;" preserveAspectRatio="none">
-            <path d="M0 100 L190 60 L360 90 L530 45 L700 85 L890 55 L1140 100" fill="none" stroke="#8CA184" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="stroke-dasharray: 1500; stroke-dashoffset: 1500; animation: mtnDrawBack3c 7s ease-in-out infinite;"></path>
-            <path d="M0 95 L170 95 L285 35 L380 70 L495 20 L610 75 L725 40 L840 90 L990 55 L1140 95" fill="none" stroke="#315343" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="stroke-dasharray: 1300; stroke-dashoffset: 1300; animation: mtnDrawFront3c 7s ease-in-out infinite;"></path>
+            <path d="M0 105 L140 85 L220 95 L300 72 L380 92 L460 65 L540 88 L630 60 L710 90 L800 68 L880 95 L960 70 L1140 105" fill="none" stroke="#C8A977" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="stroke-dasharray: 1600; stroke-dashoffset: 1600; animation: mtnDrawFar3c 16s ease-in-out infinite;"></path>
+            <path d="M0 100 L120 68 L190 82 L260 50 L330 78 L420 40 L480 72 L560 35 L640 75 L720 48 L800 80 L890 42 L960 70 L1140 100" fill="none" stroke="#8CA184" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="stroke-dasharray: 1700; stroke-dashoffset: 1700; animation: mtnDrawBack3c 16s ease-in-out infinite;"></path>
+            <path d="M0 95 L90 95 L150 45 L175 55 L200 30 L230 60 L285 20 L310 38 L340 65 L380 32 L410 50 L450 15 L475 35 L520 68 L565 25 L595 45 L640 70 L690 30 L720 48 L770 65 L820 40 L855 58 L900 20 L925 40 L970 62 L1015 45 L1060 70 L1140 95" fill="none" stroke="#315343" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="stroke-dasharray: 2400; stroke-dashoffset: 2400; animation: mtnDrawFront3c 16s ease-in-out infinite;"></path>
           </svg>
         </div>
       </div>
@@ -194,8 +197,7 @@
   </sc-if>
   <sc-if value="{{ isAbout }}" hint-placeholder-val="{{ false }}">
     <div style="max-width: 900px; margin: 0 auto; padding: {{ innerSectionPad }};">
-      <p style="color: #315343; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 14px; margin: 0 0 10px;">ABOUT</p>
-      <h1 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(28px, 4vw, 38px); margin: 0 0 32px;">About Kendra &amp; Pedorthics in Fernie</h1>
+      <h1 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(28px, 4vw, 38px); margin: 0 0 32px;">ABOUT</h1>
 
       <div style="display: grid; grid-template-columns: {{ aboutImgGridCols }}; gap: {{ aboutImgGap }}; align-items: start; margin-bottom: 56px;">
         <img src="assets/kendra-headshot.jpg" alt="Kendra Sweeney" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 4px;" />
@@ -224,8 +226,7 @@
   <!-- ============ SERVICES ============ -->
   <sc-if value="{{ isServices }}" hint-placeholder-val="{{ false }}">
     <div style="max-width: 1100px; margin: 0 auto; padding: {{ innerSectionPad }};">
-      <p style="color: #315343; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 14px; margin: 0 0 10px;">SERVICES</p>
-      <h1 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(28px, 4vw, 38px); margin: 0 0 40px;">Orthotics Services in Fernie, BC</h1>
+      <h1 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(28px, 4vw, 38px); margin: 0 0 40px;">SERVICES</h1>
       <div style="display: flex; flex-direction: column; gap: 16px;">
         <sc-for list="{{ services }}" as="svc" hint-placeholder-count="5">
           <div style="background: #F3EFE6; border-radius: 6px; padding: 32px; padding-left: 28px; border-left: 4px solid transparent; transition: border-color 0.25s ease, background 0.25s ease, padding-left 0.25s ease; cursor: pointer;" style-hover="border-left-color: #A55B3F; background: #FAF7EF; padding-left: 36px;">
@@ -240,8 +241,7 @@
   <!-- ============ FAQ ============ -->
   <sc-if value="{{ isFaq }}" hint-placeholder-val="{{ false }}">
     <div style="max-width: 800px; margin: 0 auto; padding: {{ innerSectionPad }};">
-      <p style="color: #315343; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 14px; margin: 0 0 10px;">FAQ</p>
-      <h1 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(28px, 4vw, 38px); margin: 0 0 40px;">Process &amp; What to Expect</h1>
+      <h1 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(28px, 4vw, 38px); margin: 0 0 40px;">FAQ</h1>
       <div style="display: flex; flex-direction: column; gap: 8px;">
         <sc-for list="{{ faqs }}" as="faq" hint-placeholder-count="5">
           <div style="border-bottom: 1px solid rgba(49,83,67,0.15); padding: 30px 4px;">
@@ -256,8 +256,7 @@
   <!-- ============ CONTACT ============ -->
   <sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}">
     <div style="max-width: 1100px; margin: 0 auto; padding: {{ innerSectionPad }};">
-      <p style="color: #315343; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 14px; margin: 0 0 10px;">CONTACT</p>
-      <h1 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(28px, 4vw, 38px); margin: 0 0 40px;">Contact Our Fernie Clinic</h1>
+      <h1 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(28px, 4vw, 38px); margin: 0 0 40px;">CONTACT</h1>
 
       <div style="display: grid; grid-template-columns: {{ contactGridCols }}; gap: 40px;">
         <form onSubmit="{{ handleSubmit }}" style="display: flex; flex-direction: column; gap: 6px;">
@@ -284,8 +283,8 @@
           <p style="color: #8a8171; font-size: 12.5px; margin: 4px 0 0;">Submitting opens your email app with a message addressed to kendra@elkvalleyorthotics.ca.</p>
 
           <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 14.5px; color: #4a5a4e;">
-            <span>[COMING SOON] Street address, Fernie, BC</span>
-            <span>[COMING SOON] Phone number</span>
+            <span>561C, Highway #3, Fernie, BC</span>
+            <a href="tel:+12502687202" style="color: #A55B3F; text-decoration: none;" style-hover="color: #315343; text-decoration: underline;">250-268-7202</a>
             <a href="mailto:kendra@elkvalleyorthotics.ca" style="color: #A55B3F; text-decoration: none;" style-hover="color: #315343; text-decoration: underline;">kendra@elkvalleyorthotics.ca</a>
           </div>
         </form>
@@ -302,7 +301,10 @@
     <div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: {{ footerDirection }}; flex-wrap: wrap; justify-content: space-between; align-items: {{ footerAlign }}; gap: 24px; padding-bottom: 28px; border-bottom: 1px solid rgba(243,239,230,0.15);">
       <div style="display: flex; align-items: center; gap: 10px;">
         <img src="assets/logo-icon.png" alt="Elk Valley Orthotics icon" style="height: 44px; width: 44px; object-fit: contain;" />
-        <span style="font-family: 'Hussar Bold', sans-serif; font-size: 15px; color: #F3EFE6;">Elk Valley Orthotics</span>
+        <span style="display: flex; flex-direction: column; line-height: 0.92;">
+          <span style="font-family: 'Hussar Bold', sans-serif; font-size: 16px; color: #F3EFE6; letter-spacing: 0.02em;">ELK VALLEY</span>
+          <span style="font-family: 'Hussar Ekologiczne', sans-serif; font-size: 16px; color: #F3EFE6; letter-spacing: 0.02em;">ORTHOTICS</span>
+        </span>
       </div>
       <div style="display: flex; gap: 24px; flex-wrap: wrap;">
         <a href="#" onClick="{{ goHome }}" style="text-decoration: none; color: #B7C2B6; font-size: 14px;">Home</a>
@@ -313,7 +315,8 @@
       </div>
       <a href="https://elkvalleyorthotics.janeapp.com/" target="_blank" rel="noopener" style="text-decoration: none; background: #A55B3F; color: #F3EFE6; font-weight: 700; font-size: 14px; padding: 11px 20px; border-radius: 3px;">Book Appointment</a>
     </div>
-    <p style="max-width: 1240px; margin: 20px auto 0; color: #8A9689; font-size: 13px; text-align: center;">&copy; 2026 Elk Valley Orthotics. All rights reserved.</p>
+    <p style="max-width: 1240px; margin: 20px auto 0; color: #D6DED4; font-size: 13.5px; text-align: center;"><a href="tel:+12502687202" style="color: #F3EFE6; text-decoration: none;" style-hover="text-decoration: underline;">250-268-7202</a> &nbsp;·&nbsp; <a href="mailto:kendra@elkvalleyorthotics.ca" style="color: #F3EFE6; text-decoration: none;" style-hover="text-decoration: underline;">kendra@elkvalleyorthotics.ca</a></p>
+    <p style="max-width: 1240px; margin: 10px auto 0; color: #C3CDC1; font-size: 13px; text-align: center;">&copy; 2026 Elk Valley Orthotics. All rights reserved.</p>
   </footer>
 
 </div>
@@ -454,7 +457,7 @@ class Component extends DCLogic {
       headerBg: this.state.scrolled ? '#EDE7D8' : '#F3EFE6',
       headerShadow: this.state.scrolled ? '0 6px 18px rgba(36,53,44,0.12)' : '0 2px 10px rgba(49,83,67,0.06)',
       headerPadding: this.state.scrolled ? '10px' : '18px',
-      logoSize: this.state.scrolled ? '46px' : '54px',
+      logoSize: this.state.scrolled ? '40px' : '52px',
       mobileNavOpen: this.state.mobileNavOpen,
       desktopNavDisplay: this.state.isMobile ? 'none' : 'flex',
       mobileButtonDisplay: this.state.isMobile ? 'flex' : 'none',
