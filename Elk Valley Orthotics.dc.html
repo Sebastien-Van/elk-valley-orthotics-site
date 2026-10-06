@@ -255,40 +255,10 @@
       <h1 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: clamp(28px, 4vw, 38px); margin: 0 0 40px;">CONTACT</h1>
 
       <div style="display: grid; grid-template-columns: {{ contactGridCols }}; gap: 40px;">
-<<<<<<< HEAD
         <div style="display: flex; flex-direction: column; gap: 28px;">
           <div>
             <h2 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: 17px; margin: 0 0 8px;">Address</h2>
             <a href="https://www.google.com/maps/search/?api=1&query=561C+Highway+3,+Fernie,+BC" target="_blank" rel="noopener" style="color: #4a5a4e; font-size: 16px; text-decoration: none;" style-hover="color: #A55B3F; text-decoration: underline;">561C, Highway #3, Fernie, BC</a>
-=======
-        <form onSubmit="{{ handleSubmit }}" style="display: flex; flex-direction: column; gap: 6px;">
-          <input type="text" placeholder="Name" value="{{ formName }}" onChange="{{ setName }}" style="padding: 14px; border: 1px solid {{ nameBorder }}; border-radius: 3px; font-family: 'Montserrat', sans-serif; font-size: 16px; background: #FFFFFF; min-height: 44px; box-sizing: border-box;" />
-          <sc-if value="{{ showErrors }}" hint-placeholder-val="{{ false }}">
-            <sc-if value="{{ nameError }}" hint-placeholder-val="{{ false }}">
-              <p style="color: #A55B3F; font-size: 13px; margin: 0 0 8px;">Please enter your name.</p>
-            </sc-if>
-          </sc-if>
-          <input type="email" placeholder="Email" value="{{ formEmail }}" onChange="{{ setEmail }}" style="padding: 14px; border: 1px solid {{ emailBorder }}; border-radius: 3px; font-family: 'Montserrat', sans-serif; font-size: 16px; background: #FFFFFF; min-height: 44px; box-sizing: border-box;" />
-          <sc-if value="{{ showErrors }}" hint-placeholder-val="{{ false }}">
-            <sc-if value="{{ emailError }}" hint-placeholder-val="{{ false }}">
-              <p style="color: #A55B3F; font-size: 13px; margin: 0 0 8px;">Please enter a valid email address.</p>
-            </sc-if>
-          </sc-if>
-          <input type="tel" placeholder="Phone" value="{{ formPhone }}" onChange="{{ setPhone }}" style="padding: 14px; border: 1px solid rgba(49,83,67,0.25); border-radius: 3px; font-family: 'Montserrat', sans-serif; font-size: 16px; background: #FFFFFF; min-height: 44px; box-sizing: border-box; margin-bottom: 8px;" />
-          <textarea placeholder="Message" rows="5" value="{{ formMessage }}" onChange="{{ setMessage }}" style="padding: 14px; border: 1px solid {{ messageBorder }}; border-radius: 3px; font-family: 'Montserrat', sans-serif; font-size: 16px; resize: vertical; background: #FFFFFF;"></textarea>
-          <sc-if value="{{ showErrors }}" hint-placeholder-val="{{ false }}">
-            <sc-if value="{{ messageError }}" hint-placeholder-val="{{ false }}">
-              <p style="color: #A55B3F; font-size: 13px; margin: 0 0 8px;">Please enter a message.</p>
-            </sc-if>
-          </sc-if>
-          <button type="submit" style="background: #A55B3F; color: #F3EFE6; border: none; font-weight: 700; font-size: 15px; padding: 14px; border-radius: 3px; cursor: pointer; min-height: 44px; margin-top: 8px;">Send Message</button>
-          <p style="color: #8a8171; font-size: 12.5px; margin: 4px 0 0;">Submitting opens your email app with a message addressed to kendra@elkvalleyorthotics.ca.</p>
-
-          <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 14.5px; color: #4a5a4e;">
-            <span>561C, Highway #3, Fernie, BC</span>
-            <a href="tel:+12502687202" style="color: #A55B3F; text-decoration: none;" style-hover="color: #315343; text-decoration: underline;">250-268-7202</a>
-            <a href="mailto:kendra@elkvalleyorthotics.ca" style="color: #A55B3F; text-decoration: none;" style-hover="color: #315343; text-decoration: underline;">kendra@elkvalleyorthotics.ca</a>
->>>>>>> d9574ebd089b3a8f239743fa70b481327c1ee588
           </div>
           <div>
             <h2 style="font-family: 'Hussar Bold', sans-serif; color: #315343; font-size: 17px; margin: 0 0 8px;">Phone</h2>
